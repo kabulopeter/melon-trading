@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "C:\Users\KABULO\Desktop\projets\melon\fetch_real_data_all.py", line 14, in <module>
+    from ai_prediction.services import PredictionService
+  File "C:\Users\KABULO\Desktop\projets\melon\ai_prediction\services.py", line 7, in <module>
+    from sklearn.preprocessing import MinMaxScaler
+ModuleNotFoundError: No module named 'sklearn'

@@ -1,0 +1,460 @@
+2025-12-18 16:12:46.291377: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-12-18 16:14:31.446125: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\keras\src\export\tf2onnx_lib.py:8: FutureWarning: In the future `np.object` will be defined as the corresponding NumPy scalar.
+  if not hasattr(np, "object"):
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-10-20 04:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-10-21 04:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-10-22 04:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-10-23 04:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-10-24 04:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-10-27 04:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-10-28 04:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-10-29 04:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-10-30 04:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-10-31 04:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-03 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-04 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-05 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-06 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-07 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-10 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-11 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-12 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-13 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-14 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-17 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-18 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-19 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-20 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-21 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-24 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-25 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-26 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-28 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-01 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-02 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-03 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-04 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-05 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-08 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-09 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-10 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-11 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-12 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-15 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-16 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-17 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-10-19 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-10-20 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-10-21 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-10-22 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-10-23 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-10-24 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-10-25 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-10-26 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-10-27 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-10-28 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-10-29 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-10-30 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-10-31 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-01 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-02 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-03 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-04 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-05 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-06 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-07 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-08 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-09 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-10 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-11 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-12 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-13 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-14 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-15 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-16 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-17 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-18 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-19 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-20 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-21 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-22 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-23 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-24 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-25 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-26 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-27 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-28 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-29 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-30 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-01 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-02 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-03 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-04 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-05 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-06 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-07 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-08 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-09 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-10 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-11 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-12 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-13 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-14 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-15 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-16 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-17 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-10-19 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-10-20 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-10-21 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-10-22 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-10-23 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-10-24 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-10-26 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-10-27 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-10-28 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-10-29 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-10-30 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-10-31 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-02 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-03 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-04 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-05 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-06 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-07 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-09 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-10 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-11 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-12 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-13 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-14 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-16 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-17 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-18 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-19 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-20 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-21 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-23 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-24 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-25 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-26 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-27 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-28 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-30 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-01 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-02 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-03 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-04 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-05 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-07 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-08 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-09 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-10 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-11 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-12 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-14 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-15 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-16 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-17 00:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-10-20 04:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-10-21 04:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-10-22 04:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-10-23 04:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-10-24 04:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-10-27 04:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-10-28 04:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-10-29 04:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-10-30 04:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-10-31 04:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-03 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-04 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-05 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-06 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-07 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-10 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-11 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-12 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-13 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-14 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-17 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-18 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-19 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-20 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-21 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-24 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-25 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-26 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-11-28 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-01 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-02 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-03 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-04 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-05 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-08 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-09 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-10 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-11 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-12 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-15 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-16 05:00:00) while time zone support is active.
+  warnings.warn(
+C:\Users\KABULO\Desktop\projets\melon\venv\Lib\site-packages\django\db\models\fields\__init__.py:1671: RuntimeWarning: DateTimeField PriceHistory.datetime received a naive datetime (2025-12-17 05:00:00) while time zone support is active.
+  warnings.warn(
+INFO:ai_prediction.services:Starting Prediction for AAPL
+C:\Users\KABULO\Desktop\projets\melon\ai_prediction\services.py:94: FutureWarning: DataFrame.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  return df.fillna(method='bfill').fillna(50)
+ERROR:ai_prediction.services:LSTM Prediction Error: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+INFO:ai_prediction.services:Generated NEUTRAL signal for AAPL with 50.00% confidence
+INFO:ai_prediction.services:Starting Prediction for BTCUSD
+C:\Users\KABULO\Desktop\projets\melon\ai_prediction\services.py:94: FutureWarning: DataFrame.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  return df.fillna(method='bfill').fillna(50)
+ERROR:ai_prediction.services:LSTM Prediction Error: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+INFO:ai_prediction.services:Generated NEUTRAL signal for BTCUSD with 50.00% confidence
+INFO:ai_prediction.services:Starting Prediction for EURUSD
+C:\Users\KABULO\Desktop\projets\melon\ai_prediction\services.py:94: FutureWarning: DataFrame.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  return df.fillna(method='bfill').fillna(50)
+ERROR:ai_prediction.services:LSTM Prediction Error: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+INFO:ai_prediction.services:Generated SELL signal for EURUSD with 75.00% confidence
+INFO:ai_prediction.services:Starting Prediction for SPY
+C:\Users\KABULO\Desktop\projets\melon\ai_prediction\services.py:94: FutureWarning: DataFrame.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  return df.fillna(method='bfill').fillna(50)
+ERROR:ai_prediction.services:LSTM Prediction Error: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+INFO:ai_prediction.services:Generated NEUTRAL signal for SPY with 50.00% confidence
+
+--- Processing AAPL (STOCK) via Polygon ---
+Fetching data for AAPL (as AAPL)...
+[FETCH] Connexion Ó Polygon.io pour rÚcupÚrer AAPL ...
+[OK] 42 bougies rÚcupÚrÚes avec succÞs.
+Cleared old data for AAPL
+[SAVE] Sauvegarde de 42 enregistrements pour AAPL...
+[OK] Sauvegarde en base de donnÚes terminÚe.
+[OK] Real data for AAPL saved.
+
+--- Processing BTCUSD (CRYPTO) via Polygon ---
+Fetching data for X:BTCUSD (as BTCUSD)...
+[FETCH] Connexion Ó Polygon.io pour rÚcupÚrer X:BTCUSD ...
+[OK] 60 bougies rÚcupÚrÚes avec succÞs.
+Cleared old data for BTCUSD
+[SAVE] Sauvegarde de 60 enregistrements pour BTCUSD...
+[OK] Sauvegarde en base de donnÚes terminÚe.
+[OK] Real data for BTCUSD saved.
+
+--- Processing EURUSD (FOREX) via Polygon ---
+Fetching data for C:EURUSD (as EURUSD)...
+[FETCH] Connexion Ó Polygon.io pour rÚcupÚrer C:EURUSD ...
+[OK] 52 bougies rÚcupÚrÚes avec succÞs.
+Cleared old data for EURUSD
+[SAVE] Sauvegarde de 52 enregistrements pour EURUSD...
+[OK] Sauvegarde en base de donnÚes terminÚe.
+[OK] Real data for EURUSD saved.
+
+--- Processing SPY (INDICE) via Polygon ---
+Fetching data for SPY (as SPY)...
+[FETCH] Connexion Ó Polygon.io pour rÚcupÚrer SPY ...
+[OK] 42 bougies rÚcupÚrÚes avec succÞs.
+Cleared old data for SPY
+[SAVE] Sauvegarde de 42 enregistrements pour SPY...
+[OK] Sauvegarde en base de donnÚes terminÚe.
+[OK] Real data for SPY saved.
+
+[AI] Demarrage des predictions automatiques...
+[AI] Signal NEUTRAL genere pour AAPL (Confiance: 50.0%)
+[AI] Signal NEUTRAL genere pour BTCUSD (Confiance: 50.0%)
+[AI] Signal SELL genere pour EURUSD (Confiance: 75.0%)
+[AI] Signal NEUTRAL genere pour SPY (Confiance: 50.0%)
+
+--- All operations completed ---

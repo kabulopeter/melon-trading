@@ -1,0 +1,35 @@
+# fly.toml app configuration file generated for melon-trading
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+
+app = "melon-trading"
+primary_region = "cdg"  # Paris region
+
+[build]
+
+[env]
+  PORT = "8000"
+  PYTHONUNBUFFERED = "1"
+
+[http_service]
+  internal_port = 8000
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ["app"]
+
+  [[http_service.checks]]
+    interval = "15s"
+    timeout = "2s"
+    grace_period = "5s"
+    method = "get"
+    path = "/api/health/"
+
+[[vm]]
+  cpu_kind = "shared"
+  cpus = 1
+  memory_mb = 512
+
+[[statics]]
+  guest_path = "/app/staticfiles"
+  url_prefix = "/static/"

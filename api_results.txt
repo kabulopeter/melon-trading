@@ -1,0 +1,33 @@
+Checking: http://127.0.0.1:8000/api/v1/trades/
+  [OK] Status: 200, Items: 16
+  Snippet: {'id': 44, 'asset': {'id': 2, 'symbol': 'R_100', 'name': 'Volatility 100 Index', 'asset_type': 'SYNTHETIC', 'is_active': True, 'last_price': 1229.6439125329}, 'side': 'BUY', 'status': 'CLOSED', 'entry_price': '1245.9476942906', 'exit_price': '1221.0287404048', 'size': '3.8891797984', 'stop_loss': '1221.0287404048', 'take_profit': '1295.7856020622', 'pnl': '-96.9142920488', 'confidence_score': 0.9721154146475537, 'opened_at': '2025-12-07T02:08:37.685943Z', 'closed_at': '2025-12-07T02:08:37.697824Z', 'deriv_contract_id': None}
+Checking: http://127.0.0.1:8000/api/v1/assets/
+  [OK] Status: 200, Items: 3
+  Snippet: {'id': 1, 'symbol': 'AAPL', 'name': 'Apple Inc.', 'asset_type': 'STOCK', 'is_active': True, 'last_price': None}
+Checking: http://127.0.0.1:8000/api/v1/assets/?asset_type=CRYPTO&is_active=true
+  [OK] Status: 200, Items: 0
+  Snippet: No data found
+Checking: http://127.0.0.1:8000/api/v1/assets/?asset_type=FOREX&is_active=true
+  [OK] Status: 200, Items: 1
+  Snippet: {'id': 3, 'symbol': 'EURUSD', 'name': 'Euro / USD', 'asset_type': 'FOREX', 'is_active': True, 'last_price': None}
+Checking: http://127.0.0.1:8000/api/v1/assets/?asset_type=STOCK&is_active=true
+  [OK] Status: 200, Items: 1
+  Snippet: {'id': 1, 'symbol': 'AAPL', 'name': 'Apple Inc.', 'asset_type': 'STOCK', 'is_active': True, 'last_price': None}
+Checking: http://127.0.0.1:8000/api/v1/assets/?asset_type=INDICE&is_active=true
+  [OK] Status: 200, Items: 0
+  Snippet: No data found
+Checking: http://127.0.0.1:8000/api/v1/assets/?asset_type=SYNTHETIC&is_active=true
+  [OK] Status: 200, Items: 1
+  Snippet: {'id': 2, 'symbol': 'R_100', 'name': 'Volatility 100 Index', 'asset_type': 'SYNTHETIC', 'is_active': True, 'last_price': 1229.6439125329}
+Checking: http://127.0.0.1:8000/api/v1/prices/?page=1
+  [OK] Status: 200, Items: 366
+  Snippet: {'datetime': '2025-12-07T03:08:30.710416Z', 'open': '1227.3299466142', 'high': '1233.5534610641', 'low': '1210.7695429537', 'close': '1229.6439125329', 'volume': '3704361.0000'}
+Checking: http://127.0.0.1:8000/api/v1/prices/?page=2
+  [OK] Status: 200, Items: 366
+  Snippet: {'datetime': '2025-08-29T03:08:30.710416Z', 'open': '1288.4408343866', 'high': '1300.9012256632', 'low': '1284.8155702930', 'close': '1286.9208982930', 'volume': '1896642.0000'}
+Checking: http://127.0.0.1:8000/api/v1/prices/?page=3
+  [OK] Status: 200, Items: 366
+  Snippet: {'datetime': '2025-05-21T03:08:30.710416Z', 'open': '1085.1653303276', 'high': '1089.9332475595', 'low': '1078.6406091938', 'close': '1082.5322450086', 'volume': '2105989.0000'}
+Checking: http://127.0.0.1:8000/api/v1/prices/?page=4
+  [OK] Status: 200, Items: 366
+  Snippet: {'datetime': '2025-02-10T03:08:30.710416Z', 'open': '938.5688361682', 'high': '947.6416693731', 'low': '927.4661735003', 'close': '936.0251884904', 'volume': '3638555.0000'}

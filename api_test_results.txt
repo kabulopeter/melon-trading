@@ -1,0 +1,15 @@
+=== API TEST SUITE ===
+
+Testing API v1 Root: http://127.0.0.1:8000/api/v1/ ... DONE [200 OK]
+Testing Assets List: http://127.0.0.1:8000/api/v1/assets/ ... DONE [200 OK]
+Using Asset ID: 1 for detail tests.
+Testing Asset Detail: http://127.0.0.1:8000/api/v1/assets/1/ ... DONE [200 OK]
+Testing Asset Signals Action: http://127.0.0.1:8000/api/v1/assets/1/signals/ ... DONE [200 OK]
+Testing Price History List: http://127.0.0.1:8000/api/v1/prices/ ... DONE [200 OK]
+Testing Trades List: http://127.0.0.1:8000/api/v1/trades/ ... DONE [200 OK]
+Testing OpenAPI Schema: http://127.0.0.1:8000/api/schema/ ... DONE [200 OK]
+ERROR: Expecting value: line 1 column 1 (char 0)
+Testing Swagger UI: http://127.0.0.1:8000/api/docs/ ... DONE [200 OK]
+ERROR: Expecting value: line 1 column 1 (char 0)
+Testing ReDoc Docs: http://127.0.0.1:8000/api/redoc/ ... DONE [200 OK]
+ERROR: Expecting value: line 1 column 1 (char 0)
