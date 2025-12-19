@@ -1,35 +1,38 @@
-# fly.toml app configuration file generated for melon-trading
+# fly.toml app configuration file generated for melon-trading on 2025-12-19T14:51:06Z
+#
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
 
-app = "melon-trading"
-primary_region = "cdg"  # Paris region
+app = 'melon-trading'
+primary_region = 'iad'
+console_command = '/code/manage.py shell'
 
 [build]
 
+[deploy]
+  release_command = 'python manage.py migrate --noinput'
+
 [env]
-  PORT = "8000"
-  PYTHONUNBUFFERED = "1"
+  PORT = '8000'
+
+[processes]
+  app = 'daphne -b 0.0.0.0 -p 8000 config.asgi'
+  celery = 'celery -A config worker --loglevel=INFO'
 
 [http_service]
   internal_port = 8000
   force_https = true
-  auto_stop_machines = true
+  auto_stop_machines = 'stop'
   auto_start_machines = true
   min_machines_running = 0
-  processes = ["app"]
-
-  [[http_service.checks]]
-    interval = "15s"
-    timeout = "2s"
-    grace_period = "5s"
-    method = "get"
-    path = "/api/health/"
+  processes = ['app']
 
 [[vm]]
-  cpu_kind = "shared"
+  memory = '1gb'
+  cpu_kind = 'shared'
   cpus = 1
-  memory_mb = 512
+  memory_mb = 1024
 
 [[statics]]
-  guest_path = "/app/staticfiles"
-  url_prefix = "/static/"
+  guest_path = '/code/static'
+  url_prefix = '/static/'
