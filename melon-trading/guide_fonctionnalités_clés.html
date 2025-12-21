@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Melon Trading - Guide</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Theme Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13b6ec",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#101d22",
+                        "card-dark": "#1c2427",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Pulse animation for the spotlight */
+        @keyframes pulse-ring {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(19, 182, 236, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(19, 182, 236, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(19, 182, 236, 0); }
+        }
+        .spotlight-pulse {
+            animation: pulse-ring 2s infinite;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-white overflow-x-hidden antialiased">
+<div class="relative min-h-screen w-full mx-auto max-w-md bg-background-dark shadow-2xl overflow-hidden">
+<!-- ========================================== -->
+<!-- LAYER 1: THE BACKGROUND APP UI (DIMMED) -->
+<!-- ========================================== -->
+<div class="flex flex-col h-full opacity-100 pointer-events-none select-none">
+<!-- Top App Bar -->
+<div class="flex items-center bg-background-dark p-4 pb-2 justify-between border-b border-[#1c2427]">
+<div class="flex size-12 shrink-0 items-center gap-3">
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-10 border border-[#3b4d54]" data-alt="User profile avatar showing a stylized abstract face" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA64sZWc1uNTu59TzCIzSiHkbm9YOuiIUMMmzPXs2qEWvrPIUDZRsFVVtn_QfgFiAAq7hm48GzJuyWHfeFIVGdD3BUeJv3UGrJy_pX4C43DeHjl4KU-AxS55Ct7vJNHr675v0gTAy65u_7XXiVWo9PRZaI6Wx6iQMRxtXQui6nx9avGWNEqc7VttOdEfnObLQLTVQZjK8Tpfyblxkx13bcOt-IxoHhOPzSsWtyGQVzqA7QCb6YEVERTLZNsYsJTrDj4ZZ1VmLFw7z-K");'></div>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Melon Trading</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex items-center justify-center rounded-lg h-10 w-10 text-white">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</div>
+<!-- Scrollable Dashboard Content -->
+<div class="flex-1 overflow-y-auto pb-20 p-4 space-y-6">
+<!-- Welcome Text -->
+<div>
+<h1 class="text-2xl font-bold text-white mb-1">Bonjour, Alex 👋</h1>
+<p class="text-[#9db2b9] text-sm">Prêt à optimiser vos gains aujourd'hui ?</p>
+</div>
+<!-- CARD 1: AI BOT (Target for Step 1) -->
+<!-- Note: In the background layer, this is just visual -->
+<div class="flex flex-col rounded-xl shadow-lg bg-[#1c2427] overflow-hidden border border-[#2a363b]">
+<div class="w-full h-32 bg-center bg-no-repeat bg-cover" data-alt="Abstract blue digital network visualization representing AI" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB813XdZ854soAxbAivoz_srHaGKCkJ3MEJDrRy2oyTJR7RxHrbCDabYK4uuhB1MKmRRAoPjxlf1w252MDZbfTAjEpxwR8v7REy-f9na3vN0iSaBoY8JlUURB9mGovhhPwPh-HqIT3Zcn9UVVYBOWd7t1ZoD6gIseDZoNgr1pfdMtJVBGcY8qOyYXjZg0VxvPRU03Caq5Z_HCbT3Hh6EB44XJGp43bqpCGQfBJ8CqKzCcfGihF-4fFl-ZpwOpJ9ab4XJvOTVXk2Uf5P");'></div>
+<div class="flex w-full flex-col p-4 gap-4">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-white text-lg font-bold">Melon AI Bot</p>
+<p class="text-[#9db2b9] text-sm mt-1">Trading intelligent 24/7</p>
+</div>
+<span class="px-2 py-1 rounded bg-[#2a363b] text-[#13b6ec] text-xs font-bold uppercase tracking-wider">Inactif</span>
+</div>
+<div class="flex items-center justify-between mt-2 pt-4 border-t border-[#2a363b]">
+<div class="flex flex-col">
+<span class="text-[#9db2b9] text-xs">Performance (est.)</span>
+<span class="text-[#13b6ec] font-bold text-sm">+12.5% / mois</span>
+</div>
+<!-- This is the button that will be highlighted in the overlay -->
+<button class="flex cursor-pointer items-center justify-center rounded-lg h-9 px-4 bg-[#13b6ec] text-[#111618] text-sm font-bold shadow-lg shadow-[#13b6ec]/20">
+                                ACTIVER LE BOT
+                            </button>
+</div>
+</div>
+</div>
+<!-- CARD 2: Market Overview (Secondary, dimmed) -->
+<div class="flex flex-col rounded-xl shadow-lg bg-[#1c2427] p-4 border border-[#2a363b]">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-white font-bold">Marché en direct</h3>
+<span class="text-[#9db2b9] text-xs">Vue globale</span>
+</div>
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-[#f7931a] flex items-center justify-center text-white font-bold text-xs">₿</div>
+<div>
+<p class="text-white text-sm font-medium">Bitcoin</p>
+<p class="text-[#9db2b9] text-xs">BTC/USD</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-white text-sm font-medium">$42,350.20</p>
+<p class="text-green-500 text-xs">+1.24%</p>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-[#627eea] flex items-center justify-center text-white font-bold text-xs">Ξ</div>
+<div>
+<p class="text-white text-sm font-medium">Ethereum</p>
+<p class="text-[#9db2b9] text-xs">ETH/USD</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-white text-sm font-medium">$2,210.85</p>
+<p class="text-red-400 text-xs">-0.45%</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Nav Placeholder -->
+<div class="h-16 border-t border-[#1c2427] bg-background-dark flex justify-around items-center px-2">
+<div class="flex flex-col items-center gap-1 opacity-50"><span class="material-symbols-outlined text-[#13b6ec]">dashboard</span></div>
+<div class="flex flex-col items-center gap-1 opacity-50"><span class="material-symbols-outlined text-white">query_stats</span></div>
+<div class="flex flex-col items-center gap-1 opacity-50"><span class="material-symbols-outlined text-white">account_balance_wallet</span></div>
+<div class="flex flex-col items-center gap-1 opacity-50"><span class="material-symbols-outlined text-white">person</span></div>
+</div>
+</div>
+<!-- ========================================== -->
+<!-- LAYER 2: BACKDROP DIMMER -->
+<!-- ========================================== -->
+<!-- This layer darkens everything. We use backdrop-blur for iOS premium feel -->
+<div class="absolute inset-0 bg-[#0b1215]/85 backdrop-blur-[2px] z-40 transition-all duration-500"></div>
+<!-- ========================================== -->
+<!-- LAYER 3: INTERACTIVE GUIDE (SPOTLIGHT) -->
+<!-- ========================================== -->
+<!-- This container matches the padding of the main content to align elements easily -->
+<div class="absolute inset-0 z-50 flex flex-col p-4 pointer-events-none">
+<!-- Spacer to push content down to match the underlying UI structure -->
+<!-- Header (64px) + Welcome (50px approx) + Gap (24px) + Card Image Height (128px) + Card Padding Top (16px) + Title (28px) + Gap -->
+<!-- We are targeting the button at the bottom of the first card. -->
+<!-- Instead of guessing pixels, we recreate the layout structure transparently -->
+<div class="mt-[74px] space-y-6 w-full"> <!-- Matches header + margin -->
+<div class="opacity-0 h-[60px]"></div> <!-- Matches welcome text block -->
+<!-- Recreating the Card Structure simply for positioning -->
+<div class="flex flex-col rounded-xl w-full">
+<div class="w-full h-32 opacity-0"></div> <!-- Image placeholder -->
+<div class="flex w-full flex-col p-4 gap-4">
+<div class="h-[44px]"></div> <!-- Title block placeholder -->
+<div class="flex items-center justify-between mt-2 pt-4">
+<div class="flex flex-col opacity-0">
+<span>...</span>
+<span>...</span>
+</div>
+<!-- THE SPOTLIGHT ELEMENT -->
+<!-- This is the only clickable element in this layer -->
+<!-- We duplicate the button here to make it appear "through" the darkness -->
+<div class="relative pointer-events-auto">
+<!-- Glowing Ring Effect -->
+<div class="absolute -inset-2 rounded-xl border-2 border-[#13b6ec] spotlight-pulse z-0"></div>
+<!-- The Actual Highlighted Button -->
+<button class="relative z-10 flex cursor-pointer items-center justify-center rounded-lg h-9 px-4 bg-[#13b6ec] text-[#111618] text-sm font-bold shadow-[0_0_15px_rgba(19,182,236,0.5)]">
+                                    ACTIVER LE BOT
+                                </button>
+<!-- Connecting Line (Desktop/Tablet visualization, subtle on mobile) -->
+<div class="absolute top-full left-1/2 -translate-x-1/2 w-0.5 h-8 bg-gradient-to-b from-[#13b6ec] to-transparent z-0"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- THE INFO BUBBLE / TOOLTIP -->
+<!-- Positioned relative to the spotlight area roughly -->
+<div class="pointer-events-auto w-full mt-2 animate-[fadeIn_0.5s_ease-out]">
+<div class="flex flex-col items-start gap-4 rounded-xl border border-[#3b4d54] bg-[#1c2427] p-5 shadow-2xl relative">
+<!-- Little triangle arrow pointing up -->
+<div class="absolute -top-2 right-[2rem] w-4 h-4 bg-[#1c2427] border-l border-t border-[#3b4d54] transform rotate-45"></div>
+<div class="flex flex-col gap-2 w-full">
+<div class="flex justify-between items-center w-full">
+<span class="text-[#13b6ec] text-xs font-bold uppercase tracking-wider">Étape 1 sur 3</span>
+<button class="text-[#9db2b9] hover:text-white">
+<span class="material-symbols-outlined text-sm">close</span>
+</button>
+</div>
+<p class="text-white text-lg font-bold leading-tight">Activez le Bot IA</p>
+<p class="text-[#9db2b9] text-sm font-normal leading-relaxed">
+                            Commencez ici. Laissez nos algorithmes analyser le marché et ouvrir des positions gagnantes pour vous automatiquement.
+                        </p>
+</div>
+<div class="flex w-full items-center justify-between mt-2">
+<!-- Page Indicators -->
+<div class="flex flex-row gap-2">
+<div class="h-1.5 w-6 rounded-full bg-[#13b6ec]"></div>
+<div class="h-1.5 w-1.5 rounded-full bg-[#3b4d54]"></div>
+<div class="h-1.5 w-1.5 rounded-full bg-[#3b4d54]"></div>
+</div>
+<!-- Actions -->
+<div class="flex gap-3">
+<!-- Skip Button -->
+<button class="text-white/60 text-xs font-medium px-2 py-2 hover:text-white transition-colors">
+                                Passer
+                            </button>
+<!-- Next Button -->
+<button class="flex items-center justify-center overflow-hidden rounded-lg h-9 px-5 bg-white text-[#111618] text-sm font-bold hover:bg-gray-100 transition-colors">
+                                Suivant
+                            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Safe Area Spacer -->
+<div class="mt-auto mb-8 flex justify-center w-full pointer-events-auto">
+<button class="flex items-center gap-2 text-white/40 text-sm font-medium hover:text-white transition-colors">
+<span class="material-symbols-outlined text-lg">visibility_off</span>
+                    Masquer les astuces
+                </button>
+</div>
+</div>
+</div>
+</body></html>

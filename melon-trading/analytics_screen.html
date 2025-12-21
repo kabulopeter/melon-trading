@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Actualités du Marché - Melon-Trading</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13b6ec",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#101d22",
+                        "surface-dark": "#1a2c32", // Custom surface color for cards in dark mode
+                        "surface-light": "#ffffff",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>.scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display overflow-hidden">
+<div class="relative flex h-screen w-full flex-col overflow-hidden">
+<div class="flex-none z-20 bg-background-light dark:bg-background-dark shadow-sm border-b border-gray-200 dark:border-gray-800/50">
+<div class="flex items-center p-4 justify-between">
+<a href="melon-trading_dashboard_24.html" class="text-slate-900 dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</a>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Actualités du Marché</h2>
+<div class="flex w-10 items-center justify-end">
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors text-slate-900 dark:text-white">
+<span class="material-symbols-outlined">tune</span>
+</button>
+</div>
+</div>
+<div class="px-4 pb-3">
+<label class="flex flex-col w-full">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-12 bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700/50 focus-within:border-primary transition-colors">
+<div class="text-gray-400 flex items-center justify-center pl-4 rounded-l-lg">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl bg-transparent text-slate-900 dark:text-white focus:outline-0 focus:ring-0 border-none h-full placeholder:text-gray-400 px-4 pl-2 text-base font-normal leading-normal" placeholder="Rechercher actif ou mot-clé..." value=""/>
+</div>
+</label>
+</div>
+<div class="px-4 pb-2">
+<div class="flex p-1 bg-gray-200 dark:bg-black/20 border border-gray-200 dark:border-gray-800 rounded-xl relative">
+<button class="flex-1 py-1.5 text-sm font-semibold rounded-lg bg-white dark:bg-surface-dark text-slate-900 dark:text-white shadow-sm transition-all">
+                        Flux
+                    </button>
+<button class="flex-1 py-1.5 text-sm font-medium rounded-lg text-gray-500 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-all flex items-center justify-center gap-2">
+<span>Enregistrés</span>
+<span class="bg-gray-400/20 text-gray-500 dark:text-gray-400 text-[10px] px-1.5 rounded-full font-bold">2</span>
+</button>
+</div>
+</div>
+<div class="flex gap-3 px-4 py-3 overflow-x-auto scrollbar-hide border-t border-gray-100 dark:border-gray-800/50">
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary px-5 shadow-lg shadow-primary/20 transition-transform active:scale-95">
+<p class="text-white text-sm font-semibold leading-normal">Tout</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 px-5 transition-colors hover:bg-gray-100 dark:hover:bg-gray-700">
+<p class="text-gray-600 dark:text-gray-300 text-sm font-medium leading-normal">Macro</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 px-5 transition-colors hover:bg-gray-100 dark:hover:bg-gray-700">
+<p class="text-gray-600 dark:text-gray-300 text-sm font-medium leading-normal">Cryptos</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 px-5 transition-colors hover:bg-gray-100 dark:hover:bg-gray-700">
+<p class="text-gray-600 dark:text-gray-300 text-sm font-medium leading-normal">Actions</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 px-5 transition-colors hover:bg-gray-100 dark:hover:bg-gray-700">
+<p class="text-gray-600 dark:text-gray-300 text-sm font-medium leading-normal">Tech</p>
+</button>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto pb-24 scrollbar-hide">
+<div class="pt-6 pb-2 px-4">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-primary text-[20px]">trending_up</span>
+<h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight">À la une</h3>
+</div>
+<div class="relative overflow-hidden rounded-2xl shadow-md group cursor-pointer">
+<div class="bg-cover bg-center h-[240px] w-full transition-transform duration-500 group-hover:scale-105" data-alt="Digital abstract chart lines glowing blue on dark background representing bitcoin growth" style='background-image: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.85) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuA8fHcj3cqj0fHQVisXguZLgGVzajXEhc1SqkSa0LPjluzLPavQcEY054GMYCy3BnjicMVwMSw9oxHhjNjRGWeynNEsegik5l2FSlsYxKQJwVQzPW6tjlD8f0y6h9QPQdJkN0gyTdF4IDiG4Nx7Zr0xGew7WEtR7WP6nnuAAqy0EsBS0RLGqTFD4xuRqkMfXnGIMMEAaPXd-cLNrpQuybBrOscnpyge3CFhBmQH5140eLNvtSIwfcb_vAaXhNSy1lWdCxZeoS_MG5Ly");'>
+</div>
+<div class="absolute top-3 right-3">
+<button class="flex items-center justify-center w-8 h-8 rounded-full bg-black/40 backdrop-blur-md text-white hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">bookmark_border</span>
+</button>
+</div>
+<div class="absolute bottom-0 left-0 w-full p-4 flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<span class="bg-green-500/20 text-green-400 backdrop-blur-md px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider border border-green-500/30">Haussier</span>
+<span class="text-gray-300 text-xs font-medium">CoinDesk • Il y a 2h</span>
+</div>
+<h3 class="text-white text-xl font-bold leading-tight">Bitcoin dépasse la résistance majeure des 45k$</h3>
+<p class="text-gray-300 text-sm font-normal line-clamp-1">Les analystes prévoient une nouvelle hausse alors que les volumes d'échange explosent sur les marchés asiatiques.</p>
+</div>
+</div>
+</div>
+<div class="pt-4 px-4">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight mb-4">Dernières nouvelles</h3>
+<div class="flex flex-col gap-4">
+<div class="flex flex-col p-4 rounded-xl bg-surface-light dark:bg-surface-dark shadow-sm border border-gray-100 dark:border-gray-800 active:scale-[0.99] transition-transform">
+<div class="flex justify-between items-start mb-2">
+<div class="flex items-center gap-2">
+<div class="w-5 h-5 rounded-full bg-orange-500 flex items-center justify-center text-[10px] font-bold text-white">B</div>
+<span class="text-xs font-semibold text-gray-500 dark:text-gray-400">Bloomberg</span>
+<span class="text-xs text-gray-400">• 4h</span>
+</div>
+<button class="text-gray-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">bookmark_border</span>
+</button>
+</div>
+<h4 class="text-base font-bold text-slate-900 dark:text-white leading-snug mb-2">La FED maintient ses taux directeurs inchangés pour le moment</h4>
+<p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed line-clamp-2 mb-3">Jérôme Powell insiste sur la nécessité de voir l'inflation baisser durablement avant tout pivot monétaire.</p>
+<div class="flex items-center gap-2 mt-auto">
+<span class="px-2 py-1 rounded-md bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 text-xs font-medium border border-gray-200 dark:border-gray-700">Macro</span>
+<span class="flex items-center gap-1 px-2 py-1 rounded-md bg-gray-100 dark:bg-gray-800/50 text-gray-500 dark:text-gray-400 text-xs font-medium border border-transparent">
+<span class="w-1.5 h-1.5 rounded-full bg-gray-400"></span> Neutre
+                            </span>
+</div>
+</div>
+<div class="flex flex-col p-4 rounded-xl bg-surface-light dark:bg-surface-dark shadow-sm border border-gray-100 dark:border-gray-800 active:scale-[0.99] transition-transform">
+<div class="flex justify-between items-start mb-2">
+<div class="flex items-center gap-2">
+<div class="w-5 h-5 rounded-full bg-black flex items-center justify-center text-[10px] font-bold text-white">X</div>
+<span class="text-xs font-semibold text-gray-500 dark:text-gray-400">Reuters</span>
+<span class="text-xs text-gray-400">• 6h</span>
+</div>
+<button class="text-primary hover:text-primary/80 transition-colors">
+<span class="material-symbols-outlined text-[20px] fill-current" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+</div>
+<h4 class="text-base font-bold text-slate-900 dark:text-white leading-snug mb-2">Apple dépasse les attentes au Q4 grâce aux services</h4>
+<p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed line-clamp-2 mb-3">Le géant de la tech affiche un chiffre d'affaires record, propulsant l'action vers de nouveaux sommets en after-hours.</p>
+<div class="flex items-center gap-2 mt-auto">
+<span class="px-2 py-1 rounded-md bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs font-medium border border-blue-500/20">$AAPL</span>
+<span class="flex items-center gap-1 px-2 py-1 rounded-md bg-green-500/10 text-green-600 dark:text-green-400 text-xs font-medium border border-green-500/20">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> Haussier
+                            </span>
+</div>
+</div>
+<div class="flex flex-col p-4 rounded-xl bg-surface-light dark:bg-surface-dark shadow-sm border border-gray-100 dark:border-gray-800 active:scale-[0.99] transition-transform">
+<div class="flex justify-between items-start mb-2">
+<div class="flex items-center gap-2">
+<div class="w-5 h-5 rounded-full bg-blue-600 flex items-center justify-center text-[10px] font-bold text-white">C</div>
+<span class="text-xs font-semibold text-gray-500 dark:text-gray-400">CoinTelegraph</span>
+<span class="text-xs text-gray-400">• 8h</span>
+</div>
+<button class="text-primary hover:text-primary/80 transition-colors">
+<span class="material-symbols-outlined text-[20px] fill-current" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+</div>
+<h4 class="text-base font-bold text-slate-900 dark:text-white leading-snug mb-2">Ethereum: Les développeurs annoncent une mise à jour critique</h4>
+<p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed line-clamp-2 mb-3">La mise à jour Dencun promet de réduire drastiquement les frais de transaction sur les Layers 2.</p>
+<div class="flex items-center gap-2 mt-auto">
+<span class="px-2 py-1 rounded-md bg-purple-500/10 text-purple-600 dark:text-purple-400 text-xs font-medium border border-purple-500/20">$ETH</span>
+<span class="flex items-center gap-1 px-2 py-1 rounded-md bg-green-500/10 text-green-600 dark:text-green-400 text-xs font-medium border border-green-500/20">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> Haussier
+                            </span>
+</div>
+</div>
+<div class="flex flex-col p-4 rounded-xl bg-surface-light dark:bg-surface-dark shadow-sm border border-gray-100 dark:border-gray-800 active:scale-[0.99] transition-transform">
+<div class="flex justify-between items-start mb-2">
+<div class="flex items-center gap-2">
+<div class="w-5 h-5 rounded-full bg-red-600 flex items-center justify-center text-[10px] font-bold text-white">W</div>
+<span class="text-xs font-semibold text-gray-500 dark:text-gray-400">WSJ</span>
+<span class="text-xs text-gray-400">• 12h</span>
+</div>
+<button class="text-gray-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">bookmark_border</span>
+</button>
+</div>
+<h4 class="text-base font-bold text-slate-900 dark:text-white leading-snug mb-2">Le pétrole chute sous les 70$ le baril</h4>
+<p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed line-clamp-2 mb-3">Les craintes d'un ralentissement économique en Chine pèsent lourdement sur la demande d'énergie mondiale.</p>
+<div class="flex items-center gap-2 mt-auto">
+<span class="px-2 py-1 rounded-md bg-yellow-500/10 text-yellow-700 dark:text-yellow-500 text-xs font-medium border border-yellow-500/20">Commodities</span>
+<span class="flex items-center gap-1 px-2 py-1 rounded-md bg-red-500/10 text-red-600 dark:text-red-400 text-xs font-medium border border-red-500/20">
+<span class="material-symbols-outlined text-[14px]">trending_down</span> Baissier
+                            </span>
+</div>
+</div>
+</div>
+</div>
+<div class="h-6"></div>
+</div>
+<div class="flex-none bg-surface-light dark:bg-background-dark border-t border-gray-200 dark:border-gray-800 px-6 py-2 flex justify-between items-center text-xs font-medium text-gray-500 dark:text-gray-400">
+<a href="melon-trading_dashboard_24.html" class="flex flex-col items-center gap-1 p-2 group">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors">home</span>
+<span class="group-hover:text-primary transition-colors">Accueil</span>
+</a>
+<button class="flex flex-col items-center gap-1 p-2 text-primary">
+<span class="material-symbols-outlined fill-current">newspaper</span>
+<span>Actualités</span>
+</button>
+<button class="flex items-center justify-center -mt-8 bg-primary rounded-full w-14 h-14 shadow-lg shadow-primary/40 border-4 border-white dark:border-background-dark">
+<span class="material-symbols-outlined text-white text-[28px]">swap_horiz</span>
+</button>
+<button class="flex flex-col items-center gap-1 p-2 group">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors">candlestick_chart</span>
+<span class="group-hover:text-primary transition-colors">Marchés</span>
+</button>
+<a href="wallet_dashboard.html" class="flex flex-col items-center gap-1 p-2 group">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors">wallet</span>
+<span class="group-hover:text-primary transition-colors">Portefeuille</span>
+</a>
+</div>
+</div>
+
+</body></html>

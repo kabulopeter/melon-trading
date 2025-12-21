@@ -2,7 +2,7 @@ from rest_framework import serializers
 from drf_spectacular.utils import extend_schema_field
 from .models import (
     Asset, PriceHistory, Trade, Signal, UserWallet, WalletTransaction, UserPreference, UserProfile,
-    MarketAlert
+    MarketAlert, StrategyProfile, RiskConfig, Challenge, UserChallenge, Badge, UserBadge
 )
 
 class MarketAlertSerializer(serializers.ModelSerializer):
@@ -16,8 +16,8 @@ class MarketAlertSerializer(serializers.ModelSerializer):
 class UserProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserProfile
-        fields = ['full_name', 'kyc_status', 'kyc_document_id', 'country', 'avatar_url']
-        read_only_fields = ['kyc_status']
+        fields = ['full_name', 'kyc_status', 'kyc_document_id', 'country', 'avatar_url', 'xp', 'level']
+        read_only_fields = ['kyc_status', 'xp', 'level']
 
 class UserPreferenceSerializer(serializers.ModelSerializer):
     class Meta:
@@ -84,3 +84,40 @@ class DepositRequestSerializer(serializers.Serializer):
 class TransferRequestSerializer(serializers.Serializer):
     amount = serializers.DecimalField(max_digits=20, decimal_places=4)
     broker_account_id = serializers.IntegerField()
+
+class StrategyProfileSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = StrategyProfile
+        fields = '__all__'
+        read_only_fields = ['user']
+
+class RiskConfigSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = RiskConfig
+        fields = '__all__'
+        read_only_fields = ['user']
+
+class ChallengeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Challenge
+        fields = '__all__'
+
+class UserChallengeSerializer(serializers.ModelSerializer):
+    challenge_details = ChallengeSerializer(source='challenge', read_only=True)
+    
+    class Meta:
+        model = UserChallenge
+        fields = ['id', 'challenge', 'challenge_details', 'current_value', 'is_completed', 'completed_at']
+        read_only_fields = ['is_completed', 'completed_at']
+
+class BadgeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Badge
+        fields = '__all__'
+
+class UserBadgeSerializer(serializers.ModelSerializer):
+    badge_details = BadgeSerializer(source='badge', read_only=True)
+    
+    class Meta:
+        model = UserBadge
+        fields = ['id', 'badge', 'badge_details', 'earned_at']

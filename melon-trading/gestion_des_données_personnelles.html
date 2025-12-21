@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gestion des Données Personnelles - Melon-Trading</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13b6ec",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#101d22",
+                        "surface-dark": "#16262c",
+                        "surface-light": "#ffffff",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px", "2xl": "1rem"},
+                },
+            },
+        }
+    </script>
+<style>.toggle-checkbox:checked {
+            right: 0;
+            border-color: #13b6ec;
+        }
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: #13b6ec;
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased text-gray-900 dark:text-white transition-colors duration-200">
+<div class="relative flex h-full min-h-screen w-full flex-col max-w-md mx-auto shadow-2xl overflow-hidden">
+<div class="sticky top-0 z-50 flex items-center bg-surface-light dark:bg-background-dark/95 backdrop-blur-md p-4 border-b border-gray-200 dark:border-gray-800">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full active:bg-gray-200 dark:active:bg-gray-800 cursor-pointer text-gray-900 dark:text-white">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-10">Données Personnelles</h2>
+</div>
+<div class="flex-1 overflow-y-auto pb-10">
+<div class="px-4 pt-6 pb-2 text-center">
+<div class="mx-auto mb-4 size-20 rounded-full bg-gradient-to-tr from-primary to-blue-400 p-1">
+<div class="size-full rounded-full bg-surface-light dark:bg-surface-dark flex items-center justify-center overflow-hidden">
+<img alt="Portrait of user avatar" class="size-full object-cover" data-alt="User profile photo avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRqMfgGnI0khDyayYD-0rIKuzXTMlfGHMtVJwbUx8VRul3yZAQaLqmSu7Ou5onUdwfB1YA8dFwFlaomT7eN3duTqdvLPgz19HVVIaOAfxJd6NqwfZvX8PsXfq7QMuFf4CfXy8zLZp4ptSTn0o-fBLi7tP1SjvN-MBr3BDEVShBr3x-u7YGbmXz1BTrXdr4NEhl58gcTgJh0SEqqJDdYqgZLbaa8p_NU4AD7BimDqAUSZSFFGPX__A0rMp4itlPZAu-Sskb3u1Aposc"/>
+</div>
+</div>
+<h1 class="text-2xl font-bold dark:text-white">Jean Dupont</h1>
+<p class="text-sm text-gray-500 dark:text-gray-400">Membre depuis 2021</p>
+<div class="mt-2 flex justify-center">
+<span class="inline-flex items-center rounded-full bg-green-500/10 px-2.5 py-0.5 text-xs font-medium text-green-600 dark:text-green-400">
+                    Compte Vérifié
+                </span>
+</div>
+</div>
+<div class="mt-6">
+<div class="flex items-center justify-between px-4 pb-2 pt-4">
+<h3 class="text-base font-bold leading-tight text-gray-900 dark:text-white">Mes Informations</h3>
+</div>
+<div class="mx-4 overflow-hidden rounded-2xl bg-surface-light dark:bg-surface-dark shadow-sm border border-gray-100 dark:border-gray-800">
+<div class="flex items-center justify-between gap-4 p-4 border-b border-gray-100 dark:border-gray-700/50 active:bg-gray-50 dark:active:bg-gray-700/30 cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-[24px]">person</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-sm font-medium leading-normal dark:text-white">Nom complet</p>
+<p class="text-sm text-gray-500 dark:text-gray-400 line-clamp-1">Jean Dupont</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors">edit</span>
+</div>
+<div class="flex items-center justify-between gap-4 p-4 border-b border-gray-100 dark:border-gray-700/50 active:bg-gray-50 dark:active:bg-gray-700/30 cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-[24px]">mail</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-sm font-medium leading-normal dark:text-white">Email</p>
+<p class="text-sm text-gray-500 dark:text-gray-400 line-clamp-1">jean.dupont@melon.com</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors">edit</span>
+</div>
+<div class="flex items-center justify-between gap-4 p-4 active:bg-gray-50 dark:active:bg-gray-700/30 cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-[24px]">smartphone</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-sm font-medium leading-normal dark:text-white">Téléphone</p>
+<p class="text-sm text-gray-500 dark:text-gray-400 line-clamp-1">+33 6 12 34 56 78</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors">edit</span>
+</div>
+</div>
+</div>
+<div class="mt-6">
+<div class="flex items-center justify-between px-4 pb-2 pt-4">
+<h3 class="text-base font-bold leading-tight text-gray-900 dark:text-white">Gestion des Consentements</h3>
+</div>
+<div class="mx-4 overflow-hidden rounded-2xl bg-surface-light dark:bg-surface-dark shadow-sm border border-gray-100 dark:border-gray-800">
+<div class="flex items-center justify-between p-4 border-b border-gray-100 dark:border-gray-700/50">
+<div class="flex-1 pr-4">
+<div class="flex items-center gap-2 mb-1">
+<p class="text-sm font-medium dark:text-white">Communications Marketing</p>
+<span class="material-symbols-outlined text-gray-400 text-[18px] cursor-help" title="Recevoir des offres et des nouvelles">info</span>
+</div>
+<p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Recevoir des offres personnalisées et des nouvelles sur les produits Melon.</p>
+</div>
+<div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+<input class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 border-gray-300 dark:border-gray-600 appearance-none cursor-pointer transition-all duration-300 left-0 checked:left-6 checked:border-primary" id="toggle1" name="toggle1" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 dark:bg-gray-700 cursor-pointer transition-colors duration-300" for="toggle1"></label>
+</div>
+</div>
+<div class="flex items-center justify-between p-4 border-b border-gray-100 dark:border-gray-700/50">
+<div class="flex-1 pr-4">
+<div class="flex items-center gap-2 mb-1">
+<p class="text-sm font-medium dark:text-white">Analyse et Performance</p>
+<span class="material-symbols-outlined text-gray-400 text-[18px] cursor-help" title="Aider à améliorer l'application">info</span>
+</div>
+<p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Autoriser la collecte de données anonymes pour améliorer l'application.</p>
+</div>
+<div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+<input checked="" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 border-gray-300 dark:border-gray-600 appearance-none cursor-pointer transition-all duration-300 left-0 checked:left-6 checked:border-primary" id="toggle2" name="toggle2" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 dark:bg-gray-700 cursor-pointer transition-colors duration-300 bg-primary/20 dark:bg-primary/20 !bg-primary" for="toggle2"></label>
+</div>
+</div>
+<div class="flex items-center justify-between p-4 border-b border-gray-100 dark:border-gray-700/50 bg-primary/5 dark:bg-primary/5">
+<div class="flex-1 pr-4">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary text-[20px]">smart_toy</span>
+<p class="text-sm font-medium dark:text-white">Amélioration de l'IA</p>
+</div>
+<p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Partager des données anonymisées pour améliorer la précision de nos modèles prédictifs, sans vous identifier.</p>
+</div>
+<div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+<input class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 border-gray-300 dark:border-gray-600 appearance-none cursor-pointer transition-all duration-300 left-0 checked:left-6 checked:border-primary" id="toggle_ai" name="toggle_ai" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 dark:bg-gray-700 cursor-pointer transition-colors duration-300" for="toggle_ai"></label>
+</div>
+</div>
+<div class="flex items-center justify-between p-4">
+<div class="flex-1 pr-4">
+<div class="flex items-center gap-2 mb-1">
+<p class="text-sm font-medium dark:text-white">Partage Partenaires</p>
+<span class="material-symbols-outlined text-gray-400 text-[18px] cursor-help" title="Partage avec des tiers de confiance">info</span>
+</div>
+<p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Partager certaines données avec nos partenaires financiers certifiés.</p>
+</div>
+<div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+<input class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 border-gray-300 dark:border-gray-600 appearance-none cursor-pointer transition-all duration-300 left-0 checked:left-6 checked:border-primary" id="toggle3" name="toggle3" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 dark:bg-gray-700 cursor-pointer transition-colors duration-300" for="toggle3"></label>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 px-4">
+<h3 class="text-base font-bold leading-tight text-gray-900 dark:text-white mb-2 pt-4">Portabilité</h3>
+<div class="rounded-2xl bg-surface-light dark:bg-surface-dark p-4 shadow-sm border border-gray-100 dark:border-gray-800">
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Vous pouvez demander une archive complète de vos données personnelles au format CSV ou JSON.</p>
+<button class="w-full flex items-center justify-center gap-2 bg-primary/10 hover:bg-primary/20 active:bg-primary/30 text-primary font-semibold py-3 px-4 rounded-xl transition-colors">
+<span class="material-symbols-outlined">download</span>
+                    Télécharger mes données
+                </button>
+<p class="text-center text-xs text-gray-400 mt-2">Le lien de téléchargement sera envoyé par email.</p>
+</div>
+</div>
+<div class="mt-8 px-4 mb-8">
+<h3 class="text-base font-bold leading-tight text-red-500 mb-2 pt-4">Zone de Danger</h3>
+<div class="rounded-2xl border border-red-200 dark:border-red-900/30 bg-red-50 dark:bg-red-900/10 p-4">
+<div class="flex gap-3 mb-3">
+<span class="material-symbols-outlined text-red-500 shrink-0">warning</span>
+<div>
+<h4 class="text-sm font-bold text-red-600 dark:text-red-400">Suppression du compte</h4>
+<p class="text-xs text-red-500/80 dark:text-red-400/70 mt-1">Cette action est irréversible. Toutes vos données, historiques de trading et préférences seront définitivement effacés.</p>
+</div>
+</div>
+<button class="w-full bg-white dark:bg-red-950 border border-red-200 dark:border-red-900 text-red-600 dark:text-red-400 font-medium py-3 px-4 rounded-xl hover:bg-red-50 dark:hover:bg-red-900/40 transition-colors">
+                    Supprimer mon compte
+                </button>
+</div>
+</div>
+<div class="h-10"></div>
+</div>
+</div>
+<div class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-surface-dark dark:bg-white text-white dark:text-gray-900 px-4 py-2 rounded-full shadow-lg flex items-center gap-2 text-sm font-medium opacity-0 pointer-events-none transition-opacity duration-300 z-50">
+<span class="material-symbols-outlined text-green-500 text-lg">check_circle</span>
+    Préférences mises à jour
+</div>
+
+</body></html>

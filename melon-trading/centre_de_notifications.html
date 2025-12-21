@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Centre de Notifications - Melon-Trading</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13b6ec",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#101d22",
+                        "surface-dark": "#18282f", // Slightly lighter than background-dark for cards
+                        "surface-light": "#ffffff",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased transition-colors duration-200">
+<div class="relative flex h-full min-h-screen w-full flex-col max-w-md mx-auto overflow-hidden bg-background-light dark:bg-background-dark shadow-2xl">
+<!-- Header -->
+<header class="sticky top-0 z-10 flex items-center justify-between px-4 py-3 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+<button class="flex items-center justify-center w-10 h-10 -ml-2 rounded-full text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-white/5 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[24px]">arrow_back_ios_new</span>
+</button>
+<h1 class="text-lg font-bold text-gray-900 dark:text-white">Notifications</h1>
+<button class="flex items-center justify-end text-sm font-semibold text-primary hover:text-primary/80 active:scale-95 transition-all">
+                Tout lire
+            </button>
+</header>
+<!-- Filters -->
+<div class="sticky top-[60px] z-10 bg-background-light dark:bg-background-dark pt-4 pb-2">
+<div class="flex gap-3 px-4 overflow-x-auto no-scrollbar pb-2">
+<!-- Active Filter -->
+<button class="flex h-9 shrink-0 items-center justify-center px-4 rounded-full bg-primary text-white shadow-lg shadow-primary/20 transition-transform active:scale-95">
+<span class="text-sm font-medium">Tous</span>
+</button>
+<!-- Inactive Filters -->
+<button class="flex h-9 shrink-0 items-center justify-center px-4 rounded-full bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/5 transition-all active:scale-95">
+<span class="text-sm font-medium">Actualités</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center px-4 rounded-full bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/5 transition-all active:scale-95">
+<span class="text-sm font-medium">Annonces</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center px-4 rounded-full bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/5 transition-all active:scale-95">
+<span class="text-sm font-medium">Conseils</span>
+</button>
+</div>
+</div>
+<!-- Notification List -->
+<main class="flex-1 flex flex-col gap-4 p-4 pb-20">
+<!-- Section Header: Today -->
+<div class="flex items-center justify-between mt-2 mb-1">
+<h3 class="text-xs font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">Aujourd'hui</h3>
+</div>
+<!-- Item 1: Unread Market News -->
+<div class="group relative flex w-full flex-col gap-3 rounded-2xl bg-white dark:bg-surface-dark p-4 shadow-sm border border-gray-100 dark:border-gray-800 active:scale-[0.99] transition-all cursor-pointer">
+<!-- Unread Indicator -->
+<div class="absolute top-4 right-4 size-2.5 rounded-full bg-primary shadow-[0_0_8px_rgba(19,182,236,0.6)]"></div>
+<div class="flex items-start gap-4">
+<div class="flex items-center justify-center rounded-xl bg-primary/10 text-primary shrink-0 size-12">
+<span class="material-symbols-outlined text-[24px]">trending_up</span>
+</div>
+<div class="flex flex-1 flex-col pr-4">
+<div class="flex justify-between items-start">
+<p class="text-gray-900 dark:text-white text-base font-semibold leading-tight mb-1">Bitcoin dépasse les 45k$</p>
+</div>
+<p class="text-gray-500 dark:text-gray-400 text-xs font-medium mb-2">Il y a 10 min</p>
+<p class="text-gray-600 dark:text-gray-300 text-sm font-normal leading-relaxed line-clamp-2">
+                            Le marché montre des signes de reprise alors que les volumes d'achat augmentent significativement sur les principales plateformes.
+                        </p>
+</div>
+</div>
+</div>
+<!-- Item 2: Unread Announcement -->
+<div class="group relative flex w-full flex-col gap-3 rounded-2xl bg-white dark:bg-surface-dark p-4 shadow-sm border border-gray-100 dark:border-gray-800 active:scale-[0.99] transition-all cursor-pointer">
+<!-- Unread Indicator -->
+<div class="absolute top-4 right-4 size-2.5 rounded-full bg-primary shadow-[0_0_8px_rgba(19,182,236,0.6)]"></div>
+<div class="flex items-start gap-4">
+<div class="flex items-center justify-center rounded-xl bg-purple-500/10 text-purple-500 shrink-0 size-12">
+<span class="material-symbols-outlined text-[24px]">campaign</span>
+</div>
+<div class="flex flex-1 flex-col pr-4">
+<div class="flex justify-between items-start">
+<p class="text-gray-900 dark:text-white text-base font-semibold leading-tight mb-1">Mise à jour v2.4 disponible</p>
+</div>
+<p class="text-gray-500 dark:text-gray-400 text-xs font-medium mb-2">Il y a 2h</p>
+<p class="text-gray-600 dark:text-gray-300 text-sm font-normal leading-relaxed line-clamp-2">
+                            Nouvelles fonctionnalités de graphiques avancés maintenant disponibles. Mettez à jour votre application pour en profiter.
+                        </p>
+</div>
+</div>
+</div>
+<!-- Section Header: Yesterday -->
+<div class="flex items-center justify-between mt-4 mb-1">
+<h3 class="text-xs font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">Hier</h3>
+</div>
+<!-- Item 3: Read Tip (No unread dot) -->
+<div class="group relative flex w-full flex-col gap-3 rounded-2xl bg-white dark:bg-surface-dark p-4 shadow-sm border border-gray-100 dark:border-gray-800 active:scale-[0.99] transition-all cursor-pointer opacity-90 hover:opacity-100">
+<div class="flex items-start gap-4">
+<div class="flex items-center justify-center rounded-xl bg-amber-500/10 text-amber-500 shrink-0 size-12">
+<span class="material-symbols-outlined text-[24px]">lightbulb</span>
+</div>
+<div class="flex flex-1 flex-col justify-center">
+<div class="flex justify-between items-start w-full">
+<p class="text-gray-900 dark:text-gray-200 text-base font-semibold leading-tight mb-1">Conseil de trading : Diversification</p>
+<span class="material-symbols-outlined text-gray-400 dark:text-gray-600 text-[20px]">chevron_right</span>
+</div>
+<p class="text-gray-500 dark:text-gray-400 text-xs font-medium mb-2">Hier à 14:30</p>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-relaxed line-clamp-2">
+                            Apprenez comment réduire vos risques en diversifiant votre portefeuille sur différents secteurs.
+                        </p>
+</div>
+</div>
+</div>
+<!-- Item 4: Read Market News -->
+<div class="group relative flex w-full flex-col gap-3 rounded-2xl bg-white dark:bg-surface-dark p-4 shadow-sm border border-gray-100 dark:border-gray-800 active:scale-[0.99] transition-all cursor-pointer opacity-90 hover:opacity-100">
+<div class="flex items-start gap-4">
+<div class="flex items-center justify-center rounded-xl bg-gray-100 dark:bg-white/5 text-gray-500 dark:text-gray-400 shrink-0 size-12">
+<span class="material-symbols-outlined text-[24px]">show_chart</span>
+</div>
+<div class="flex flex-1 flex-col justify-center">
+<div class="flex justify-between items-start w-full">
+<p class="text-gray-900 dark:text-gray-200 text-base font-semibold leading-tight mb-1">Clôture hebdomadaire</p>
+<span class="material-symbols-outlined text-gray-400 dark:text-gray-600 text-[20px]">chevron_right</span>
+</div>
+<p class="text-gray-500 dark:text-gray-400 text-xs font-medium mb-2">Hier à 09:00</p>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-relaxed line-clamp-2">
+                            Résumé des performances des principaux actifs pour la semaine écoulée.
+                        </p>
+</div>
+</div>
+</div>
+<!-- End of list / Empty state filler space -->
+<div class="h-10"></div>
+</main>
+</div>
+</body></html>

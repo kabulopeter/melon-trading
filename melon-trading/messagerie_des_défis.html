@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Messagerie des Défis</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13b6ec",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#101d22",
+                        "surface-dark": "#1c2a2f", 
+                        "bubble-incoming-dark": "#283539",
+                        "bubble-incoming-light": "#e5e7eb",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(156, 163, 175, 0.5);
+            border-radius: 20px;
+        }
+        /* Hide scrollbar for clean mobile look but keep functionality */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-white h-screen overflow-hidden flex flex-col antialiased">
+<!-- Header Section -->
+<header class="flex-none bg-white dark:bg-background-dark border-b border-gray-200 dark:border-gray-800 z-10 shadow-sm">
+<!-- Top App Bar -->
+<div class="flex items-center px-4 py-3 justify-between">
+<button class="text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors p-1 rounded-full active:bg-gray-100 dark:active:bg-gray-800">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<div class="flex-1 flex flex-col items-center justify-center text-center mx-2">
+<h1 class="text-base font-bold leading-tight tracking-tight">Défi Scalping Juillet</h1>
+<span class="text-xs text-primary font-medium">En ligne</span>
+</div>
+<button class="text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors p-1 rounded-full active:bg-gray-100 dark:active:bg-gray-800">
+<span class="material-symbols-outlined text-2xl">info</span>
+</button>
+</div>
+<!-- Participants Strip (Horizontal Scroll) -->
+<div class="w-full overflow-x-auto no-scrollbar px-4 pb-3 pt-1">
+<div class="flex items-center gap-4 min-w-max">
+<!-- Add Member Button -->
+<button class="flex flex-col items-center gap-1 group">
+<div class="size-10 rounded-full border-2 border-dashed border-gray-300 dark:border-gray-600 flex items-center justify-center text-gray-400 group-hover:border-primary group-hover:text-primary transition-colors bg-gray-50 dark:bg-surface-dark">
+<span class="material-symbols-outlined text-xl">add</span>
+</div>
+</button>
+<!-- Avatar 1 -->
+<div class="relative group cursor-pointer">
+<div class="size-10 rounded-full bg-cover bg-center border-2 border-transparent group-hover:border-primary transition-colors" data-alt="Portrait of a young woman smiling" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDaSkdBzCsPQeqno411wFCiA8dCPy7pO5AcmYETlp6JffhDOcJgrvHk0ol90YHp3zq0vAZDMX_-oK-CGLL76sUa-zYAQ9GdGJwgHWXoIBhO1sKgZQd4ZhlkSmPOMV-gUZR71fIh_NZO-vHKl8ja8vnGoasf4jzTr33DdiiGRtqR_MN_KuFgUl9OWqFivp1Y8QaSoOzHV75ArOpm5SJOT5PT8au1J4N-8P7YUFUyMgmOj_5IJJ1RLayDYVTTWIOT-G1b6-mItc3Id_BQ');"></div>
+<div class="absolute bottom-0 right-0 size-2.5 bg-green-500 border-2 border-white dark:border-background-dark rounded-full"></div>
+</div>
+<!-- Avatar 2 -->
+<div class="relative group cursor-pointer">
+<div class="size-10 rounded-full bg-cover bg-center border-2 border-transparent group-hover:border-primary transition-colors" data-alt="Portrait of a man with glasses" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDLblCL_lGIQM6Den6KCTqf6E2WW416pjyAPNTm3uK9n4pcZXd0VN6ISI_3Vnb6rXB_D3HDQMCZeVMQ5CiYk7Z2cJr_RJLGSXORd7_Tzq72EdOwUTUB1Zr011KIqVu8ZEEbyqmy4fJJoel6bQ-v54hy8YizDGJk8u_8xQSKIYR4QCQuR5lzYMSby2hb0nZeMtMKBmCzUCr6FbIjKv922Bqcy4KTxIxE56jKDiJGQoPJGLsvKISfmgL9v-79J-U9vspqglq190ydbEoa');"></div>
+<div class="absolute bottom-0 right-0 size-2.5 bg-green-500 border-2 border-white dark:border-background-dark rounded-full"></div>
+</div>
+<!-- Avatar 3 -->
+<div class="relative group cursor-pointer">
+<div class="size-10 rounded-full bg-cover bg-center border-2 border-transparent group-hover:border-primary transition-colors" data-alt="Portrait of a woman with curly hair" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC0Fjm4HYiZo6BvV7TxDZGCwHLcnhcjQ-fs3qAp0RA0zBveDzX9LVjvGhf-n9Vr16qy08lZrgUyxS90clCV3iyTZ-qGl5BfymQNwpJ8Z1S5ifdDd0YmuFEn9sfQy0fWzA_ocng41IMLW2WICJB9C74xxUvJuj7lBTLxslHxx0WrrieiCBW61TwLb-wz3rYKxMm870eJVpNoZJk4woicKAbrCD2vnzjM16G2yK6I3sl7w5omvZcuYBOtGZHguIz7SEeAUX0NqP_MZoAk');"></div>
+<div class="absolute bottom-0 right-0 size-2.5 bg-gray-400 border-2 border-white dark:border-background-dark rounded-full"></div>
+</div>
+<!-- Avatar 4 -->
+<div class="relative group cursor-pointer">
+<div class="size-10 rounded-full bg-cover bg-center border-2 border-transparent group-hover:border-primary transition-colors" data-alt="Portrait of a man with beard" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAO-FG8KTl4B5YH_uxJykyRMDKKdOslBN6qZ0Z_xo5bVhEGx3lfvzz4Zltg7koOeSGwFluIMUD8rihhlZnaVaZxTPsBPkq75twZTg574ro0jIFwokz1h1g28r6DqZ48CNlFb73KPR5rVJLTGQ6AQ66grVswccH9H6Y4uUg2vDcl1tfbP5dK-ACbxgw6ucXLF-2ig1-Pm5wRHbQ0f-uBwQVDm6r8AarEN4dG2xF2XJz3JzhGahd9jOLUbDF1J54VjocBB1THQ_9JWVYn');"></div>
+<div class="absolute bottom-0 right-0 size-2.5 bg-green-500 border-2 border-white dark:border-background-dark rounded-full"></div>
+</div>
+</div>
+</div>
+</header>
+<!-- Chat Area -->
+<main class="flex-1 overflow-y-auto p-4 space-y-6 scroll-smooth bg-background-light dark:bg-background-dark relative" id="chat-container">
+<!-- Date Separator -->
+<div class="flex justify-center w-full sticky top-0 z-0">
+<span class="bg-gray-200 dark:bg-surface-dark text-gray-500 dark:text-gray-400 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wide opacity-90 shadow-sm backdrop-blur-sm">
+                Aujourd'hui, 10:23
+            </span>
+</div>
+<!-- System Message -->
+<div class="flex justify-center w-full my-4">
+<div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
+<span class="material-symbols-outlined text-sm">auto_graph</span>
+<p>Nouveau palier atteint par l'équipe : +5% !</p>
+</div>
+</div>
+<!-- Incoming Message (Image + Text) -->
+<div class="flex items-end gap-3 max-w-[85%] group">
+<div class="size-8 rounded-full bg-cover bg-center shrink-0 mb-1" data-alt="Portrait of Alice T." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAoApwZDbQJLFfT4aPJZA5LrR7mMXly5ndvAKzFVhMUSMXqT7hEaIR4kT_mhYT_ZRaPrkpqAvYkVoYkbnjvh1BT29ESc6er44wcQ5lvjQ6lR_f7Tif8sgQl3rEteOXbnSW_hChuCsCQ6R_1cNJeSLAO7uZbd7Waio6OhL5M7LB9vUMlm52aGS6Pn1CPkn_ZgffcXRZu6IxJTdCU9_qo8Wd4ztAwnofysM9RYD889lOMyF4PHlJ65Q2JVY1JcHXIJ1BOd6J-TtdYkNmn');"></div>
+<div class="flex flex-col gap-1 items-start">
+<span class="text-gray-500 dark:text-gray-400 text-xs ml-1">Alice T.</span>
+<div class="flex flex-col bg-white dark:bg-bubble-incoming-dark rounded-2xl rounded-bl-none p-3 shadow-sm border border-gray-100 dark:border-gray-700/50">
+<p class="text-sm text-gray-800 dark:text-gray-100 mb-2 leading-relaxed">
+                        Regardez ce trade sur l'EUR/USD ! La divergence est claire, ça monte fort 🚀
+                    </p>
+<div class="relative w-full aspect-video rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-800 mt-1 cursor-pointer hover:opacity-95 transition-opacity">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Financial candlestick chart showing an upward trend with green candles" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB4woci6bDcpCHuHFLr0wNyWqWF05I_xzLghIONZKTogZogFgnUgvIeCKEcOGb2KISSVc3LIXWTYtaOw3qwZEjkkz6JMcdNU4q86T0YrvNqQBBGFsf9fT7bKovP0cGTGfFSGIhF9OehxSkUkw1ixw7v-YIwKNTeqp1R1cgmX8WLtcF99Oz0Xf1o1rNFbWab7uDy3fW5XFkaq4CrOPLyVdPswk5PBmyANiNDGget4aNLgi1W_ZeV93-KpfP0OxzuZU5TWwapYZjYoLLs');"></div>
+<div class="absolute bottom-2 right-2 bg-black/60 backdrop-blur-md px-2 py-0.5 rounded text-[10px] text-white font-mono">H1</div>
+</div>
+</div>
+<span class="text-[10px] text-gray-400 ml-1">10:25</span>
+</div>
+</div>
+<!-- Incoming Message (Text Only) -->
+<div class="flex items-end gap-3 max-w-[85%] group">
+<div class="size-8 rounded-full bg-cover bg-center shrink-0 mb-1" data-alt="Portrait of Bob M." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCqkrKQoaUZsQf_5yUEYchBU-7cbSJm7qhW17H8XD3pXe80p20BkJ0AMHPdkuLeljgRj03Xh1sYUi52_alWoqyi5PGCv1X28tz_W3qWWi6nle62Tdgd5Lw7ElBNYpL3bfKX0GJPBaD2fyN1BM2wvVoL0mUgU73eF1ltzywyT1kAZdlRZDspsWS8w5HrXqXy6P3Nb_Rre79uyrDP9KOQkexmFJDu4xxyLZq1BYJzznE_B5BPQwCeaYWGQkjgCp1GD1gykMhHnHL1wmP9');"></div>
+<div class="flex flex-col gap-1 items-start">
+<span class="text-gray-500 dark:text-gray-400 text-xs ml-1">Bob M.</span>
+<div class="bg-white dark:bg-bubble-incoming-dark rounded-2xl rounded-bl-none px-4 py-3 shadow-sm border border-gray-100 dark:border-gray-700/50">
+<p class="text-sm text-gray-800 dark:text-gray-100 leading-relaxed">
+                        Bien joué ! Je suis à +2% aujourd'hui sur le Gold. J'attends le pullback pour rentrer à nouveau.
+                    </p>
+</div>
+<div class="flex items-center gap-2 ml-1">
+<span class="text-[10px] text-gray-400">10:28</span>
+<!-- Reaction Pill -->
+<div class="flex items-center gap-1 px-1.5 py-0.5 bg-gray-100 dark:bg-gray-800 rounded-full border border-gray-200 dark:border-gray-700">
+<span class="text-xs">🔥</span>
+<span class="text-[10px] font-bold text-gray-600 dark:text-gray-300">2</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Outgoing Message (Me) -->
+<div class="flex flex-col gap-1 items-end w-full">
+<div class="flex items-end gap-3 max-w-[85%] justify-end">
+<div class="flex flex-col items-end">
+<div class="bg-primary rounded-2xl rounded-br-none px-4 py-3 shadow-md text-background-dark">
+<p class="text-sm font-medium leading-relaxed">
+                            Je rattrape mon retard ce soir, attendez de voir mes résultats ! 📉
+                        </p>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1 mr-1">
+<span class="text-[10px] text-gray-400">10:42</span>
+<span class="material-symbols-outlined text-[12px] text-primary">done_all</span>
+</div>
+</div>
+</main>
+<!-- Bottom Input Area -->
+<footer class="flex-none bg-white dark:bg-background-dark border-t border-gray-200 dark:border-gray-800 p-3 pb-6 sm:pb-3 z-20">
+<div class="flex items-end gap-2 max-w-4xl mx-auto">
+<!-- Attachment Button -->
+<button aria-label="Add attachment" class="shrink-0 size-10 flex items-center justify-center rounded-full text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-surface-dark transition-colors">
+<span class="material-symbols-outlined">add_circle</span>
+</button>
+<!-- Chart/Performance Specific Button -->
+<button aria-label="Share performance" class="shrink-0 size-10 flex items-center justify-center rounded-full text-primary bg-primary/10 hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined filled">candlestick_chart</span>
+</button>
+<!-- Input Field -->
+<div class="flex-1 bg-gray-100 dark:bg-surface-dark rounded-2xl min-h-[44px] flex items-center px-4 py-2 border border-transparent focus-within:border-primary/50 focus-within:ring-2 focus-within:ring-primary/20 transition-all">
+<textarea class="w-full bg-transparent border-none p-0 text-sm text-gray-900 dark:text-white placeholder-gray-500 focus:ring-0 resize-none max-h-32" placeholder="Écrivez votre message..." rows="1" style="min-height: 20px;"></textarea>
+</div>
+<!-- Send Button -->
+<button class="shrink-0 size-10 flex items-center justify-center rounded-full bg-primary text-background-dark shadow-lg shadow-primary/25 hover:bg-primary/90 hover:scale-105 active:scale-95 transition-all">
+<span class="material-symbols-outlined filled text-[20px] ml-0.5">send</span>
+</button>
+</div>
+</footer>
+<!-- Overlay Gradient for Header (Optional visual polish) -->
+<div class="fixed top-[120px] left-0 right-0 h-6 bg-gradient-to-b from-black/5 to-transparent pointer-events-none z-10 dark:from-black/20"></div>
+</body></html>

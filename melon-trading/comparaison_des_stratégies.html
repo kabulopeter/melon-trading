@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Comparaison de Stratégies</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13b6ec",
+                        "secondary": "#a855f7", // Adding a secondary color for comparison
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#101d22",
+                        "surface-dark": "#1c2b31", // Slightly lighter than bg-dark for cards
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for horizontal scrolling */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="relative flex h-full min-h-screen w-full flex-col bg-background-light dark:bg-background-dark text-slate-900 dark:text-white overflow-x-hidden font-display">
+<!-- Header -->
+<div class="sticky top-0 z-50 flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between border-b border-gray-200 dark:border-white/5 backdrop-blur-md bg-opacity-90 dark:bg-opacity-90">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-slate-900 dark:text-white" style="font-size: 24px;">arrow_back</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-10">Comparaison</h2>
+<div class="flex w-10 items-center justify-end absolute right-4">
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors text-primary">
+<span class="material-symbols-outlined" style="font-size: 24px;">tune</span>
+</button>
+</div>
+</div>
+<!-- Strategy Selector (Chips) -->
+<div class="pt-4 pb-2 pl-4">
+<p class="text-xs font-medium text-slate-500 dark:text-slate-400 mb-2 uppercase tracking-wider">Stratégies sélectionnées</p>
+<div class="flex gap-3 overflow-x-auto hide-scrollbar pr-4">
+<!-- Active Strategy A -->
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full border border-primary/30 bg-primary/10 pl-3 pr-4 ring-1 ring-primary/50">
+<div class="size-2 rounded-full bg-primary"></div>
+<p class="text-primary text-sm font-semibold leading-normal">Scalping BTC</p>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:text-primary/80" style="font-size: 16px;">close</span>
+</div>
+<!-- Active Strategy B -->
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full border border-secondary/30 bg-secondary/10 pl-3 pr-4 ring-1 ring-secondary/50">
+<div class="size-2 rounded-full bg-secondary"></div>
+<p class="text-secondary text-sm font-semibold leading-normal">Swing ETH</p>
+<span class="material-symbols-outlined text-secondary cursor-pointer hover:text-secondary/80" style="font-size: 16px;">close</span>
+</div>
+<!-- Add Button -->
+<button class="flex size-9 shrink-0 items-center justify-center rounded-full border border-dashed border-slate-300 dark:border-slate-600 bg-transparent hover:bg-slate-100 dark:hover:bg-white/5 transition-colors">
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-500" style="font-size: 20px;">add</span>
+</button>
+</div>
+</div>
+<!-- Timeframe Selector -->
+<div class="px-4 py-4">
+<div class="flex h-10 w-full items-center rounded-lg bg-slate-200 dark:bg-[#1c2b31] p-1">
+<button class="group flex flex-1 items-center justify-center rounded-md py-1 text-xs font-medium text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all">
+                1S
+            </button>
+<button class="group flex flex-1 items-center justify-center rounded-md bg-white dark:bg-background-dark shadow-sm py-1 text-xs font-bold text-slate-900 dark:text-primary transition-all">
+                1M
+            </button>
+<button class="group flex flex-1 items-center justify-center rounded-md py-1 text-xs font-medium text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all">
+                3M
+            </button>
+<button class="group flex flex-1 items-center justify-center rounded-md py-1 text-xs font-medium text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all">
+                YTD
+            </button>
+<button class="group flex flex-1 items-center justify-center rounded-md py-1 text-xs font-medium text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all">
+                ALL
+            </button>
+</div>
+</div>
+<!-- Chart Section -->
+<div class="flex flex-col gap-4 px-4 pb-6">
+<div class="flex flex-col gap-1">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium leading-normal">Évolution du Capital</p>
+<div class="flex items-baseline gap-3">
+<h3 class="text-slate-900 dark:text-white text-3xl font-bold tracking-tight">+12.5%</h3>
+<span class="text-sm font-medium text-secondary">vs +8.2%</span>
+</div>
+<div class="flex items-center gap-1 text-green-500 text-sm font-medium mt-1">
+<span class="material-symbols-outlined" style="font-size: 16px;">trending_up</span>
+<span>+4.3% surperformance</span>
+</div>
+</div>
+<div class="relative h-[220px] w-full pt-4">
+<!-- Chart Container -->
+<svg class="overflow-visible" fill="none" height="100%" preserveaspectratio="none" viewbox="0 0 380 150" width="100%" xmlns="http://www.w3.org/2000/svg">
+<!-- Grid Lines -->
+<line class="text-slate-200 dark:text-white/5" stroke="currentColor" stroke-dasharray="4 4" x1="0" x2="380" y1="0" y2="0"></line>
+<line class="text-slate-200 dark:text-white/5" stroke="currentColor" stroke-dasharray="4 4" x1="0" x2="380" y1="50" y2="50"></line>
+<line class="text-slate-200 dark:text-white/5" stroke="currentColor" stroke-dasharray="4 4" x1="0" x2="380" y1="100" y2="100"></line>
+<line class="text-slate-200 dark:text-white/5" stroke="currentColor" stroke-dasharray="4 4" x1="0" x2="380" y1="150" y2="150"></line>
+<!-- Gradient Definition for Primary -->
+<defs>
+<lineargradient gradientunits="userSpaceOnUse" id="chartGradient" x1="0" x2="0" y1="0" y2="150">
+<stop stop-color="#13b6ec" stop-opacity="0.2"></stop>
+<stop offset="1" stop-color="#13b6ec" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<!-- Secondary Line (Swing ETH) -->
+<!-- Lower performance, smoother -->
+<path d="M0 120 C 40 115, 80 110, 120 90 C 160 70, 200 80, 240 75 C 280 70, 320 60, 380 50" fill="none" stroke="#a855f7" stroke-linecap="round" stroke-width="2" vector-effect="non-scaling-stroke"></path>
+<!-- Primary Line (Scalping BTC) -->
+<!-- Higher performance, more volatile -->
+<!-- Filled area -->
+<path d="M0 110 C 30 110, 60 90, 90 100 C 120 110, 150 60, 180 50 C 210 40, 240 60, 270 40 C 300 20, 340 30, 380 20 V 150 H 0 V 110 Z" fill="url(#chartGradient)"></path>
+<!-- Stroke line -->
+<path d="M0 110 C 30 110, 60 90, 90 100 C 120 110, 150 60, 180 50 C 210 40, 240 60, 270 40 C 300 20, 340 30, 380 20" fill="none" stroke="#13b6ec" stroke-linecap="round" stroke-width="3" vector-effect="non-scaling-stroke"></path>
+<!-- Interactive Point (Mockup) -->
+<circle class="fill-background-dark stroke-primary" cx="270" cy="40" r="4" stroke-width="2"></circle>
+<line opacity="0.5" stroke="#13b6ec" stroke-dasharray="2 2" stroke-width="1" x1="270" x2="270" y1="40" y2="150"></line>
+</svg>
+<!-- X Axis Labels -->
+<div class="flex justify-between mt-2 px-1">
+<p class="text-slate-400 text-[11px] font-medium">01 Mai</p>
+<p class="text-slate-400 text-[11px] font-medium">08 Mai</p>
+<p class="text-slate-400 text-[11px] font-medium">15 Mai</p>
+<p class="text-slate-400 text-[11px] font-medium">22 Mai</p>
+<p class="text-slate-400 text-[11px] font-medium">29 Mai</p>
+</div>
+</div>
+</div>
+<div class="h-2 bg-slate-100 dark:bg-white/5"></div>
+<!-- Comparative Metrics Table -->
+<div class="flex flex-col flex-1 px-4 py-6 pb-24">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold">Métriques Clés</h3>
+<button class="text-primary text-sm font-medium">Exporter PDF</button>
+</div>
+<!-- Metric Cards Grid -->
+<div class="grid grid-cols-1 gap-3">
+<!-- Table Header (Visual Guide) -->
+<div class="grid grid-cols-12 gap-2 px-4 py-2 text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+<div class="col-span-4">Métrique</div>
+<div class="col-span-4 text-center text-primary">Scalping BTC</div>
+<div class="col-span-4 text-center text-secondary">Swing ETH</div>
+</div>
+<!-- Row 1: Return -->
+<div class="group relative overflow-hidden rounded-xl bg-white dark:bg-[#1c2b31] p-4 shadow-sm border border-slate-100 dark:border-white/5">
+<div class="grid grid-cols-12 gap-2 items-center">
+<div class="col-span-4 flex flex-col">
+<span class="text-sm font-medium text-slate-700 dark:text-slate-200">Rendement</span>
+<span class="text-[10px] text-slate-400">Net Total</span>
+</div>
+<div class="col-span-4 text-center">
+<span class="text-base font-bold text-green-500">+12.5%</span>
+</div>
+<div class="col-span-4 text-center">
+<span class="text-base font-bold text-green-600/80 dark:text-green-500/80">+8.2%</span>
+</div>
+</div>
+<!-- Highlight Bar for Winner -->
+<div class="absolute bottom-0 left-[33%] w-1/3 h-[2px] bg-primary"></div>
+</div>
+<!-- Row 2: Drawdown -->
+<div class="group relative overflow-hidden rounded-xl bg-white dark:bg-[#1c2b31] p-4 shadow-sm border border-slate-100 dark:border-white/5">
+<div class="grid grid-cols-12 gap-2 items-center">
+<div class="col-span-4 flex flex-col">
+<span class="text-sm font-medium text-slate-700 dark:text-slate-200">Max DD</span>
+<span class="text-[10px] text-slate-400">Risque max</span>
+</div>
+<div class="col-span-4 text-center">
+<span class="text-base font-bold text-red-500">-4.2%</span>
+</div>
+<div class="col-span-4 text-center">
+<span class="text-base font-bold text-red-400">-6.5%</span>
+</div>
+</div>
+<!-- Highlight Bar for Winner (Lower DD is better) -->
+<div class="absolute bottom-0 left-[33%] w-1/3 h-[2px] bg-primary"></div>
+</div>
+<!-- Row 3: Sharpe Ratio -->
+<div class="group relative overflow-hidden rounded-xl bg-white dark:bg-[#1c2b31] p-4 shadow-sm border border-slate-100 dark:border-white/5">
+<div class="grid grid-cols-12 gap-2 items-center">
+<div class="col-span-4 flex flex-col">
+<span class="text-sm font-medium text-slate-700 dark:text-slate-200">Ratio Sharpe</span>
+<span class="text-[10px] text-slate-400">Efficience</span>
+</div>
+<div class="col-span-4 text-center">
+<span class="text-base font-bold text-slate-900 dark:text-white">1.82</span>
+</div>
+<div class="col-span-4 text-center">
+<span class="text-base font-bold text-slate-500 dark:text-slate-400">1.24</span>
+</div>
+</div>
+</div>
+<!-- Row 4: Win Rate -->
+<div class="group relative overflow-hidden rounded-xl bg-white dark:bg-[#1c2b31] p-4 shadow-sm border border-slate-100 dark:border-white/5">
+<div class="grid grid-cols-12 gap-2 items-center">
+<div class="col-span-4 flex flex-col">
+<span class="text-sm font-medium text-slate-700 dark:text-slate-200">Win Rate</span>
+<span class="text-[10px] text-slate-400">% Gagnant</span>
+</div>
+<div class="col-span-4 flex flex-col items-center justify-center gap-1">
+<span class="text-base font-bold text-slate-900 dark:text-white">65%</span>
+<div class="w-12 h-1 bg-slate-200 dark:bg-white/10 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[65%]"></div>
+</div>
+</div>
+<div class="col-span-4 flex flex-col items-center justify-center gap-1">
+<span class="text-base font-bold text-slate-500 dark:text-slate-400">55%</span>
+<div class="w-12 h-1 bg-slate-200 dark:bg-white/10 rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[55%]"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Row 5: Profit Factor -->
+<div class="group relative overflow-hidden rounded-xl bg-white dark:bg-[#1c2b31] p-4 shadow-sm border border-slate-100 dark:border-white/5">
+<div class="grid grid-cols-12 gap-2 items-center">
+<div class="col-span-4 flex flex-col">
+<span class="text-sm font-medium text-slate-700 dark:text-slate-200">Profit Factor</span>
+<span class="text-[10px] text-slate-400">Gain/Perte</span>
+</div>
+<div class="col-span-4 text-center">
+<span class="text-base font-bold text-slate-900 dark:text-white">2.1</span>
+</div>
+<div class="col-span-4 text-center">
+<span class="text-base font-bold text-slate-500 dark:text-slate-400">1.5</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Sticky Bottom Action -->
+<div class="fixed bottom-0 w-full p-4 bg-gradient-to-t from-background-light via-background-light to-transparent dark:from-background-dark dark:via-background-dark pointer-events-none">
+<button class="pointer-events-auto w-full flex items-center justify-center gap-2 rounded-xl bg-primary hover:bg-primary/90 text-white font-bold h-12 shadow-lg shadow-primary/20 transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined">analytics</span>
+            Analyser en détail
+        </button>
+</div>
+</body></html>

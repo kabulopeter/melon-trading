@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mes Courtiers - Melon-Trading</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13b6ec",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#101d22",
+                        "card-dark": "#1a2c32", // Slightly lighter than background-dark
+                        "surface-dark": "#233840", // Even lighter for interactive elements
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom toggle switch styling to match primary color */
+        .toggle-checkbox:checked {
+            right: 0;
+            border-color: #13b6ec;
+        }
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: #13b6ec;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased transition-colors duration-200">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden max-w-md mx-auto shadow-2xl">
+<!-- Header -->
+<header class="sticky top-0 z-10 flex items-center justify-between bg-background-light/95 dark:bg-background-dark/95 px-4 py-4 backdrop-blur-md border-b border-gray-200 dark:border-white/5">
+<button class="flex h-10 w-10 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-slate-900 dark:text-white" style="font-size: 24px;">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center">Mes Courtiers</h1>
+<button class="flex h-10 w-10 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-slate-900 dark:text-white" style="font-size: 24px;">help</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="flex-1 px-4 py-6 pb-24">
+<!-- Stats Section -->
+<div class="flex gap-4 mb-8">
+<div class="flex flex-1 flex-col gap-1 rounded-xl p-5 bg-white dark:bg-card-dark shadow-sm border border-gray-100 dark:border-white/5">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary" style="font-size: 20px;">bolt</span>
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400">Actifs</p>
+</div>
+<p class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">3</p>
+</div>
+<div class="flex flex-1 flex-col gap-1 rounded-xl p-5 bg-white dark:bg-card-dark shadow-sm border border-gray-100 dark:border-white/5">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-slate-400" style="font-size: 20px;">link</span>
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400">Connectés</p>
+</div>
+<p class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">5</p>
+</div>
+</div>
+<!-- List Headline -->
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">Vos Plateformes</h2>
+<button class="text-sm font-medium text-primary hover:text-primary/80 transition-colors">Gérer</button>
+</div>
+<!-- Brokers List -->
+<div class="flex flex-col gap-4">
+<!-- Item 1: Binance (Active) -->
+<div class="group relative flex items-center justify-between rounded-2xl bg-white dark:bg-card-dark p-4 shadow-sm border border-gray-100 dark:border-white/5 transition-all hover:border-primary/50">
+<div class="flex items-center gap-4 flex-1">
+<div class="relative h-14 w-14 flex-shrink-0 overflow-hidden rounded-xl bg-slate-100 dark:bg-surface-dark flex items-center justify-center">
+<!-- Placeholder Logo -->
+<div class="h-full w-full bg-contain bg-center bg-no-repeat" data-alt="Binance crypto exchange logo golden diamond shape" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCpDccEgvyqQZ8SRIzKjEUabNbvKyP61LvHimMuWaK34FRejGQS0aYdQSflPFeXEtRIBDGpUx0HB2jWvYqgRBOpPGj5tVPannlIiSsCA1KBXUTVEuW3GD_iB76_aUw0KA7_fmjrKShjINyLl9Zyekl76yEaQZwBKyZVaiJ4XtBnntBcezY3JgBMTNdKHIDX8RjYkV_uy1ZZA2k_U0rLMzplIX6Jc3N7DxiaVN5CoWU0d3uLy7gjRkgcVlrApHTcLqkph2kd2D2F9VZm');"></div>
+<!-- Status Dot Indicator -->
+<div class="absolute bottom-0 right-0 h-3 w-3 translate-x-1/4 translate-y-1/4 rounded-full bg-emerald-500 ring-2 ring-white dark:ring-card-dark"></div>
+</div>
+<div class="flex flex-col">
+<h3 class="font-bold text-slate-900 dark:text-white leading-tight">Binance</h3>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="inline-flex items-center rounded-md bg-emerald-500/10 px-1.5 py-0.5 text-xs font-medium text-emerald-600 dark:text-emerald-400 ring-1 ring-inset ring-emerald-500/20">Connecté</span>
+<span class="text-xs text-slate-500 dark:text-slate-400 font-mono">•••4829</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3 pl-4 border-l border-gray-100 dark:border-white/5 ml-2">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary/20 dark:peer-focus:ring-primary/30 rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+<button class="text-slate-400 hover:text-slate-600 dark:hover:text-white transition-colors">
+<span class="material-symbols-outlined" style="font-size: 24px;">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Item 2: Alpaca (Error) -->
+<div class="group relative flex items-center justify-between rounded-2xl bg-white dark:bg-card-dark p-4 shadow-sm border border-red-100 dark:border-red-900/30">
+<div class="flex items-center gap-4 flex-1">
+<div class="relative h-14 w-14 flex-shrink-0 overflow-hidden rounded-xl bg-slate-100 dark:bg-surface-dark flex items-center justify-center">
+<!-- Placeholder Logo -->
+<div class="h-full w-full bg-contain bg-center bg-no-repeat scale-75" data-alt="Alpaca trading API logo minimalist abstract shape" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAUz2hkDOSJ6G7BY9Ry7DxOBdfKepJY-SZrhs-zJ-yBsNA2aRnQ97d8YSBf7IhOY7BvBdlLl2iidOnGezZvdYmZG1zKsIoLrfRB7Zuc826H2TjD9buv3W8rwXaakPqSF7R13g4-uaXrDpATUex7hlb4eNdOEOGDB8GNYEz0SId1BRZQggXhvDHb6s7BE1-kyn3e-Uaf7e4NW-dWT0Ai6LTR5vWfCb5EFBT8lHox5HAeCQpF77DtdwLyGrSxHVJN9LLG2w1FKcIbR-58');"></div>
+<!-- Status Dot Indicator -->
+<div class="absolute bottom-0 right-0 h-3 w-3 translate-x-1/4 translate-y-1/4 rounded-full bg-red-500 ring-2 ring-white dark:ring-card-dark"></div>
+</div>
+<div class="flex flex-col">
+<h3 class="font-bold text-slate-900 dark:text-white leading-tight">Alpaca</h3>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="inline-flex items-center rounded-md bg-red-500/10 px-1.5 py-0.5 text-xs font-medium text-red-600 dark:text-red-400 ring-1 ring-inset ring-red-500/20">Erreur API</span>
+<span class="text-xs text-slate-500 dark:text-slate-400 font-mono">•••9210</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3 pl-4 border-l border-gray-100 dark:border-white/5 ml-2">
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary/20 dark:peer-focus:ring-primary/30 rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+<button class="text-slate-400 hover:text-slate-600 dark:hover:text-white transition-colors">
+<span class="material-symbols-outlined" style="font-size: 24px;">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Item 3: Deriv (Active) -->
+<div class="group relative flex items-center justify-between rounded-2xl bg-white dark:bg-card-dark p-4 shadow-sm border border-gray-100 dark:border-white/5 transition-all hover:border-primary/50">
+<div class="flex items-center gap-4 flex-1">
+<div class="relative h-14 w-14 flex-shrink-0 overflow-hidden rounded-xl bg-slate-100 dark:bg-surface-dark flex items-center justify-center">
+<!-- Placeholder Logo -->
+<div class="h-full w-full bg-contain bg-center bg-no-repeat scale-75" data-alt="Deriv broker logo geometric D shape" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDEA4POwD5XQ9m1XFr9oA_Bw9LCqHn81FPVc3cRB7fD5WqTG94FFCFZl-8ZBSRZNmJMRGjYzmPrC_K-CdFvsVGI_mVDahJY3hQ-ZkdE0RHFwvT08og2QctPt-uhYTWNtvSG_iM1dduCyh4WfPL1ruyEM9oY4MPPCgoWyQbg0R8IkFxcqqywJq__kWpEChw9avuZuex6NROVFk-rETiT7ameeLRg9SI21gJp2tCneW6wolNMXjAtHsgoOXqzjOcDCZ9mODqXgQn8h4dh');"></div>
+<!-- Status Dot Indicator -->
+<div class="absolute bottom-0 right-0 h-3 w-3 translate-x-1/4 translate-y-1/4 rounded-full bg-emerald-500 ring-2 ring-white dark:ring-card-dark"></div>
+</div>
+<div class="flex flex-col">
+<h3 class="font-bold text-slate-900 dark:text-white leading-tight">Deriv</h3>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="inline-flex items-center rounded-md bg-emerald-500/10 px-1.5 py-0.5 text-xs font-medium text-emerald-600 dark:text-emerald-400 ring-1 ring-inset ring-emerald-500/20">Connecté</span>
+<span class="text-xs text-slate-500 dark:text-slate-400 font-mono">•••11X7</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3 pl-4 border-l border-gray-100 dark:border-white/5 ml-2">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary/20 dark:peer-focus:ring-primary/30 rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+<button class="text-slate-400 hover:text-slate-600 dark:hover:text-white transition-colors">
+<span class="material-symbols-outlined" style="font-size: 24px;">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Item 4: Interactive Brokers (Paused) -->
+<div class="group relative flex items-center justify-between rounded-2xl bg-white dark:bg-card-dark p-4 shadow-sm border border-gray-100 dark:border-white/5 opacity-75 grayscale-[0.5] hover:opacity-100 hover:grayscale-0 transition-all">
+<div class="flex items-center gap-4 flex-1">
+<div class="relative h-14 w-14 flex-shrink-0 overflow-hidden rounded-xl bg-slate-100 dark:bg-surface-dark flex items-center justify-center">
+<!-- Placeholder Logo -->
+<div class="h-full w-full bg-contain bg-center bg-no-repeat scale-75" data-alt="Interactive Brokers logo IB initials" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC5magsYF8AvJ1WH3UZXQhf4NpNJqXteQ934X4aVDq3LB8dxIPSiyKUfanY_qdjKEP8bZCYKGZ61QnzACn3IXOSxtAdmij-lTryscJ7F6ZzVs8D65d2N2LFLjO9XoCSwW0Z802rabXNC7BysefWTEAa5ZjoDpg-rgkjrnJ2qk-n6i94h6FjsDw1pr0YWDUNVogwesjFJ5GRzF0EpeI6Uvhqp2ds8RS6y0nMDSX9B1_6nOrevmuZvw90MI8mbx67OV_3FRT2BF88vEtN');"></div>
+<!-- Status Dot Indicator -->
+<div class="absolute bottom-0 right-0 h-3 w-3 translate-x-1/4 translate-y-1/4 rounded-full bg-slate-400 ring-2 ring-white dark:ring-card-dark"></div>
+</div>
+<div class="flex flex-col">
+<h3 class="font-bold text-slate-900 dark:text-white leading-tight">Interactive Brokers</h3>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="inline-flex items-center rounded-md bg-slate-500/10 px-1.5 py-0.5 text-xs font-medium text-slate-600 dark:text-slate-400 ring-1 ring-inset ring-slate-500/20">En pause</span>
+<span class="text-xs text-slate-500 dark:text-slate-400 font-mono">•••3389</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3 pl-4 border-l border-gray-100 dark:border-white/5 ml-2">
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary/20 dark:peer-focus:ring-primary/30 rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+<button class="text-slate-400 hover:text-slate-600 dark:hover:text-white transition-colors">
+<span class="material-symbols-outlined" style="font-size: 24px;">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Action / Sticky Bottom Bar -->
+<div class="fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background-dark via-background-dark to-transparent pt-8 max-w-md mx-auto pointer-events-none">
+<button class="pointer-events-auto flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-6 py-4 text-white shadow-lg shadow-primary/25 transition-transform active:scale-[0.98] hover:bg-primary/90 hover:shadow-primary/40">
+<span class="material-symbols-outlined" style="font-size: 24px; font-weight: 600;">add_circle</span>
+<span class="text-lg font-bold tracking-wide">Ajouter un courtier</span>
+</button>
+</div>
+</div>
+</body></html>

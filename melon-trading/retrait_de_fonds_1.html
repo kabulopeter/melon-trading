@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Retrait de Fonds - Melon-Trading</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13b6ec",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#101d22",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1c2427",
+                        "border-light": "#e5e7eb",
+                        "border-dark": "#3b4d54",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased transition-colors duration-200">
+<div class="relative flex h-full min-h-screen w-full max-w-md mx-auto flex-col overflow-hidden shadow-2xl">
+<header class="flex items-center bg-surface-light dark:bg-background-dark p-4 sticky top-0 z-20 border-b border-transparent dark:border-border-dark/30">
+<button class="text-slate-900 dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-10">Retrait de Fonds</h2>
+</header>
+<main class="flex-1 flex flex-col gap-6 p-4 overflow-y-auto no-scrollbar pb-32">
+<section class="relative overflow-hidden rounded-xl bg-gradient-to-br from-slate-800 to-black dark:from-[#1c2427] dark:to-[#101d22] border border-slate-200 dark:border-border-dark p-6 shadow-sm">
+<div class="absolute -right-4 -top-4 size-32 rounded-full bg-primary/10 blur-2xl"></div>
+<div class="absolute -left-4 -bottom-4 size-24 rounded-full bg-primary/5 blur-xl"></div>
+<div class="relative z-10 flex flex-col gap-1 text-center">
+<p class="text-slate-400 text-sm font-medium uppercase tracking-wider">Solde Retirable</p>
+<div class="flex items-center justify-center gap-2">
+<span class="text-white text-3xl font-bold tracking-tight">$1,250.00</span>
+</div>
+<div class="mt-2 inline-flex items-center justify-center gap-1.5 rounded-full bg-green-500/10 px-3 py-1 text-xs font-medium text-green-500 ring-1 ring-inset ring-green-500/20 w-fit mx-auto">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                        Disponible
+                    </div>
+</div>
+</section>
+<section>
+<div class="flex items-center justify-between px-1 mb-3">
+<h3 class="text-slate-900 dark:text-white text-base font-bold leading-tight">Compte de réception</h3>
+<button class="text-primary text-xs font-semibold uppercase tracking-wide hover:text-primary/80 transition-colors">Gérer</button>
+</div>
+<div class="flex flex-col gap-3">
+<label class="group relative flex cursor-pointer items-center gap-4 rounded-xl border border-primary bg-primary/5 dark:bg-primary/10 p-4 transition-all shadow-sm ring-1 ring-primary/20">
+<input checked="" class="peer sr-only" name="withdrawal_method" type="radio"/>
+<div class="flex size-10 items-center justify-center rounded-full bg-red-100 dark:bg-red-500/20 text-red-600 dark:text-red-500">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<div class="flex grow flex-col">
+<div class="flex items-center gap-2">
+<p class="text-slate-900 dark:text-white text-sm font-semibold">M-Pesa Vodacom</p>
+<span class="rounded-full bg-primary text-white px-2 py-0.5 text-[10px] font-bold leading-none">Défaut</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium mt-0.5">+243 812 ••• •89</p>
+</div>
+<div class="size-5 rounded-full border-2 border-slate-300 dark:border-slate-600 peer-checked:border-primary peer-checked:bg-primary flex items-center justify-center transition-colors">
+<div class="size-2 rounded-full bg-white opacity-0 peer-checked:opacity-100"></div>
+</div>
+</label>
+<label class="group relative flex cursor-pointer items-center gap-4 rounded-xl border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark p-4 transition-all hover:border-primary/50 has-[:checked]:border-primary has-[:checked]:ring-1 has-[:checked]:ring-primary has-[:checked]:bg-primary/5">
+<input class="peer sr-only" name="withdrawal_method" type="radio"/>
+<div class="flex size-10 items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined">credit_card</span>
+</div>
+<div class="flex grow flex-col">
+<p class="text-slate-900 dark:text-white text-sm font-semibold">Visa Débit</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium mt-0.5">•••• •••• •••• 4242</p>
+</div>
+<div class="size-5 rounded-full border-2 border-slate-300 dark:border-slate-600 peer-checked:border-primary peer-checked:bg-primary flex items-center justify-center transition-colors">
+<div class="size-2 rounded-full bg-white opacity-0 peer-checked:opacity-100"></div>
+</div>
+</label>
+<label class="group relative flex cursor-pointer items-center gap-4 rounded-xl border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark p-4 transition-all hover:border-primary/50 has-[:checked]:border-primary has-[:checked]:ring-1 has-[:checked]:ring-primary has-[:checked]:bg-primary/5">
+<input class="peer sr-only" name="withdrawal_method" type="radio"/>
+<div class="flex size-10 items-center justify-center rounded-full bg-red-100 dark:bg-red-500/20 text-red-500">
+<span class="material-symbols-outlined">phonelink_ring</span>
+</div>
+<div class="flex grow flex-col">
+<p class="text-slate-900 dark:text-white text-sm font-semibold">Airtel Money</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium mt-0.5">+243 998 ••• •12</p>
+</div>
+<div class="size-5 rounded-full border-2 border-slate-300 dark:border-slate-600 peer-checked:border-primary peer-checked:bg-primary flex items-center justify-center transition-colors">
+<div class="size-2 rounded-full bg-white opacity-0 peer-checked:opacity-100"></div>
+</div>
+</label>
+<button class="flex w-full items-center gap-4 rounded-xl border border-dashed border-slate-300 dark:border-slate-600 bg-transparent p-4 transition-all hover:bg-slate-50 dark:hover:bg-white/5 active:scale-[0.99] group mt-1">
+<div class="flex size-10 items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">add</span>
+</div>
+<div class="flex grow flex-col items-start text-left">
+<p class="text-slate-900 dark:text-white text-sm font-semibold group-hover:text-primary transition-colors">Ajouter une méthode</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs">Mobile Money ou Carte Bancaire</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+</div>
+</section>
+<section class="flex flex-col gap-5">
+<div class="flex flex-col gap-2">
+<label class="text-slate-900 dark:text-white text-sm font-medium px-1">Montant du retrait</label>
+<div class="relative flex items-center">
+<span class="absolute left-4 text-slate-500 dark:text-slate-400 font-medium">$</span>
+<input class="w-full rounded-xl border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark py-3.5 pl-8 pr-20 text-slate-900 dark:text-white placeholder:text-slate-400 focus:border-primary focus:ring-1 focus:ring-primary transition-all text-lg font-medium" placeholder="0.00" type="number"/>
+<button class="absolute right-3 rounded-lg bg-primary/10 px-3 py-1.5 text-xs font-bold text-primary hover:bg-primary/20 transition-colors">
+                            MAX
+                        </button>
+</div>
+</div>
+</section>
+<section class="rounded-xl border border-primary/20 bg-primary/5 p-4 dark:bg-primary/10">
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">lock_clock</span>
+<h3 class="text-sm font-bold text-slate-900 dark:text-white">Vérification de sécurité</h3>
+</div>
+<div class="flex items-center gap-1.5 rounded-md bg-surface-light dark:bg-surface-dark px-2 py-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-primary">timer</span>
+<span class="font-mono text-xs font-bold text-primary">01:59</span>
+</div>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 leading-tight">
+                        Un code OTP a été envoyé à votre numéro (+243 ••• •89). Veuillez le saisir ci-dessous pour confirmer.
+                    </p>
+<div class="relative mt-1">
+<input class="w-full rounded-xl border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark py-3 text-center text-xl font-bold tracking-[0.5em] text-slate-900 dark:text-white placeholder:text-slate-300 dark:placeholder:text-slate-600 focus:border-primary focus:ring-1 focus:ring-primary transition-all" inputmode="numeric" maxlength="6" placeholder="------" type="text"/>
+</div>
+<button class="self-end text-xs font-semibold text-slate-500 hover:text-primary transition-colors mt-1">
+                        Renvoyer le code
+                    </button>
+</div>
+</section>
+<section class="rounded-xl bg-slate-100 dark:bg-slate-800/50 p-4 border border-transparent dark:border-white/5">
+<div class="flex flex-col gap-3">
+<div class="flex justify-between items-center text-sm">
+<span class="text-slate-500 dark:text-slate-400">Frais de transaction</span>
+<span class="text-slate-900 dark:text-white font-medium">$2.00</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-slate-500 dark:text-slate-400">Délai de traitement</span>
+<span class="text-slate-900 dark:text-white font-medium">Instant - 24h</span>
+</div>
+<div class="h-px w-full bg-slate-200 dark:bg-white/10 my-1"></div>
+<div class="flex justify-between items-center">
+<span class="text-slate-700 dark:text-slate-200 text-sm font-semibold">Montant reçu estimé</span>
+<span class="text-primary font-bold text-lg">$0.00</span>
+</div>
+</div>
+</section>
+<div class="flex items-start gap-3 rounded-lg bg-yellow-500/10 p-3">
+<span class="material-symbols-outlined text-yellow-500 text-xl mt-0.5">info</span>
+<p class="text-xs text-yellow-600 dark:text-yellow-500/90 leading-relaxed">
+                    Les retraits par Mobile Money sont limités à $500 par transaction. Pour des montants plus élevés, veuillez utiliser le virement bancaire.
+                </p>
+</div>
+</main>
+<footer class="bg-surface-light dark:bg-background-dark p-4 border-t border-transparent dark:border-border-dark/30 sticky bottom-0 z-20 pb-6">
+<button class="w-full flex items-center justify-center gap-2 rounded-xl bg-primary hover:bg-primary/90 text-white font-semibold py-4 text-base shadow-lg shadow-primary/20 transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+                Confirmer le retrait
+            </button>
+</footer>
+</div>
+
+</body></html>

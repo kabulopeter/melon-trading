@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Notifications Détaillées - Melon-Trading</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13b6ec",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#101d22",
+                        "surface-dark": "#16262c", // Slightly lighter than background-dark for cards
+                        "surface-light": "#ffffff",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #283539;
+            border-radius: 3px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display min-h-screen flex flex-col overflow-x-hidden">
+<header class="sticky top-0 z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-gray-200 dark:border-white/5">
+<div class="flex items-center p-4 justify-between max-w-lg mx-auto w-full">
+<button class="flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-slate-900 dark:text-white" style="font-size: 24px;">arrow_back</span>
+</button>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-10">Notifications</h2>
+</div>
+</header>
+<main class="flex-1 w-full max-w-lg mx-auto pb-24">
+<div class="mt-2 px-4">
+<div class="flex items-center gap-4 bg-surface-light dark:bg-surface-dark p-4 rounded-xl shadow-sm border border-gray-200 dark:border-white/5 justify-between">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center rounded-lg bg-gray-100 dark:bg-[#283539] shrink-0 size-10 text-gray-600 dark:text-gray-300">
+<span class="material-symbols-outlined" style="font-size: 24px;">notifications_off</span>
+</div>
+<div class="flex flex-col">
+<p class="text-base font-medium leading-tight">Ne pas déranger</p>
+<span class="text-xs text-gray-500 dark:text-gray-400">Suspendre tout pour 24h</span>
+</div>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-gray-300 dark:bg-[#283539] p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary transition-colors">
+<div class="h-full w-[27px] rounded-full bg-white shadow-sm"></div>
+<input class="invisible absolute" type="checkbox"/>
+</label>
+</div>
+</div>
+</div>
+<div class="mt-6">
+<h3 class="text-sm font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400 px-6 pb-3">Activité de Trading</h3>
+<div class="bg-surface-light dark:bg-surface-dark border-y border-gray-200 dark:border-white/5 sm:border sm:rounded-xl sm:mx-4 mb-4 overflow-hidden">
+<div class="flex items-center gap-4 px-4 py-4 justify-between border-b border-gray-100 dark:border-white/5">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center rounded-lg bg-green-500/10 text-green-600 dark:bg-green-500/20 dark:text-green-400 shrink-0 size-10">
+<span class="material-symbols-outlined" style="font-size: 24px;">bolt</span>
+</div>
+<div>
+<p class="text-base font-medium leading-normal">Exécution de Trade</p>
+</div>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-gray-300 dark:bg-[#283539] p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary transition-colors">
+<div class="h-full w-[27px] rounded-full bg-white shadow-sm"></div>
+<input checked="" class="invisible absolute" type="checkbox"/>
+</label>
+</div>
+</div>
+<div class="px-4 py-3 bg-gray-50 dark:bg-[#131b20]">
+<div class="mb-4 pb-4 border-b border-gray-200 dark:border-white/5">
+<p class="text-xs text-gray-500 mb-2 font-medium">Canaux de réception</p>
+<div class="flex gap-2 flex-wrap">
+<div class="flex h-8 cursor-pointer items-center gap-x-2 rounded-lg bg-primary/10 border border-primary/20 px-3 transition-colors hover:bg-primary/20">
+<span class="material-symbols-outlined text-primary" style="font-size: 16px;">smartphone</span>
+<p class="text-primary text-xs font-semibold">In-App</p>
+</div>
+<div class="flex h-8 cursor-pointer items-center gap-x-2 rounded-lg bg-primary/10 border border-primary/20 px-3 transition-colors hover:bg-primary/20">
+<span class="material-symbols-outlined text-primary" style="font-size: 16px;">notifications</span>
+<p class="text-primary text-xs font-semibold">Push</p>
+</div>
+<div class="flex h-8 cursor-pointer items-center gap-x-2 rounded-lg bg-gray-200 dark:bg-[#283539] border border-transparent px-3 transition-colors hover:bg-gray-300 dark:hover:bg-[#344247]">
+<span class="material-symbols-outlined text-gray-500" style="font-size: 16px;">mail</span>
+<p class="text-gray-500 text-xs font-medium">Email</p>
+</div>
+<div class="flex h-8 cursor-pointer items-center gap-x-2 rounded-lg bg-gray-200 dark:bg-[#283539] border border-transparent px-3 transition-colors hover:bg-gray-300 dark:hover:bg-[#344247]">
+<span class="material-symbols-outlined text-gray-500" style="font-size: 16px;">send</span>
+<p class="text-gray-500 text-xs font-medium">Telegram</p>
+</div>
+</div>
+</div>
+<div class="grid gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-gray-400 dark:text-gray-500" style="font-size: 20px;">volume_up</span>
+<p class="text-sm font-medium text-gray-700 dark:text-gray-300">Sonnerie</p>
+</div>
+<div class="relative">
+<select class="appearance-none bg-transparent border-none py-0 pr-7 text-sm font-semibold text-primary focus:ring-0 cursor-pointer text-right">
+<option>Ka-ching!</option>
+<option>Défaut (Tri-tone)</option>
+<option>Cristal</option>
+</select>
+<span class="material-symbols-outlined text-primary absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none" style="font-size: 20px;">expand_more</span>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-gray-400 dark:text-gray-500" style="font-size: 20px;">vibration</span>
+<p class="text-sm font-medium text-gray-700 dark:text-gray-300">Vibration</p>
+</div>
+<label class="relative flex h-[24px] w-[40px] cursor-pointer items-center rounded-full border-none bg-gray-300 dark:bg-[#283539] p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary transition-colors">
+<div class="h-full w-[20px] rounded-full bg-white shadow-sm"></div>
+<input checked="" class="invisible absolute" type="checkbox"/>
+</label>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark border-y border-gray-200 dark:border-white/5 sm:border sm:rounded-xl sm:mx-4 overflow-hidden">
+<div class="flex items-center gap-4 px-4 py-4 justify-between border-b border-gray-100 dark:border-white/5">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center rounded-lg bg-red-500/10 text-red-600 dark:bg-red-500/20 dark:text-red-400 shrink-0 size-10">
+<span class="material-symbols-outlined" style="font-size: 24px;">trending_down</span>
+</div>
+<div>
+<p class="text-base font-medium leading-normal">Stop-Loss / Take-Profit</p>
+</div>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-gray-300 dark:bg-[#283539] p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary transition-colors">
+<div class="h-full w-[27px] rounded-full bg-white shadow-sm"></div>
+<input checked="" class="invisible absolute" type="checkbox"/>
+</label>
+</div>
+</div>
+<div class="px-4 py-3 bg-gray-50 dark:bg-[#131b20]">
+<div class="mb-4 pb-4 border-b border-gray-200 dark:border-white/5">
+<p class="text-xs text-gray-500 mb-2 font-medium">Canaux de réception</p>
+<div class="flex gap-2 flex-wrap">
+<div class="flex h-8 cursor-pointer items-center gap-x-2 rounded-lg bg-primary/10 border border-primary/20 px-3">
+<span class="material-symbols-outlined text-primary" style="font-size: 16px;">notifications</span>
+<p class="text-primary text-xs font-semibold">Push</p>
+</div>
+<div class="flex h-8 cursor-pointer items-center gap-x-2 rounded-lg bg-primary/10 border border-primary/20 px-3">
+<span class="material-symbols-outlined text-primary" style="font-size: 16px;">send</span>
+<p class="text-primary text-xs font-semibold">Telegram</p>
+</div>
+</div>
+</div>
+<div class="grid gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-gray-400 dark:text-gray-500" style="font-size: 20px;">volume_up</span>
+<p class="text-sm font-medium text-gray-700 dark:text-gray-300">Sonnerie</p>
+</div>
+<div class="relative">
+<select class="appearance-none bg-transparent border-none py-0 pr-7 text-sm font-semibold text-primary focus:ring-0 cursor-pointer text-right">
+<option>Alerte Rouge</option>
+<option>Radar</option>
+<option>Défaut</option>
+</select>
+<span class="material-symbols-outlined text-primary absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none" style="font-size: 20px;">expand_more</span>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-gray-400 dark:text-gray-500" style="font-size: 20px;">vibration</span>
+<p class="text-sm font-medium text-gray-700 dark:text-gray-300">Vibration</p>
+</div>
+<label class="relative flex h-[24px] w-[40px] cursor-pointer items-center rounded-full border-none bg-gray-300 dark:bg-[#283539] p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary transition-colors">
+<div class="h-full w-[20px] rounded-full bg-white shadow-sm"></div>
+<input checked="" class="invisible absolute" type="checkbox"/>
+</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6">
+<h3 class="text-sm font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400 px-6 pb-3">Intelligence de Marché</h3>
+<div class="bg-surface-light dark:bg-surface-dark border-y border-gray-200 dark:border-white/5 sm:border sm:rounded-xl sm:mx-4 mb-4 overflow-hidden">
+<div class="flex items-center gap-4 px-4 py-4 justify-between border-b border-gray-100 dark:border-white/5">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center rounded-lg bg-purple-500/10 text-purple-600 dark:bg-purple-500/20 dark:text-purple-400 shrink-0 size-10">
+<span class="material-symbols-outlined" style="font-size: 24px;">smart_toy</span>
+</div>
+<div class="flex flex-col">
+<p class="text-base font-medium leading-normal">Signaux IA</p>
+<span class="text-xs text-gray-500">Haute confiance uniquement</span>
+</div>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-gray-300 dark:bg-[#283539] p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary transition-colors">
+<div class="h-full w-[27px] rounded-full bg-white shadow-sm"></div>
+<input checked="" class="invisible absolute" type="checkbox"/>
+</label>
+</div>
+</div>
+<div class="px-4 py-3 bg-gray-50 dark:bg-[#131b20]">
+<div class="mb-4 pb-4 border-b border-gray-200 dark:border-white/5">
+<p class="text-xs text-gray-500 mb-2 font-medium">Canaux de réception</p>
+<div class="flex gap-2 flex-wrap">
+<div class="flex h-8 cursor-pointer items-center gap-x-2 rounded-lg bg-primary/10 border border-primary/20 px-3">
+<span class="material-symbols-outlined text-primary" style="font-size: 16px;">smartphone</span>
+<p class="text-primary text-xs font-semibold">In-App</p>
+</div>
+<div class="flex h-8 cursor-pointer items-center gap-x-2 rounded-lg bg-gray-200 dark:bg-[#283539] border border-transparent px-3 transition-colors hover:bg-gray-300 dark:hover:bg-[#344247]">
+<span class="material-symbols-outlined text-gray-500" style="font-size: 16px;">forum</span>
+<p class="text-gray-500 text-xs font-medium">Discord</p>
+</div>
+</div>
+</div>
+<div class="grid gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-gray-400 dark:text-gray-500" style="font-size: 20px;">volume_up</span>
+<p class="text-sm font-medium text-gray-700 dark:text-gray-300">Sonnerie</p>
+</div>
+<div class="relative">
+<select class="appearance-none bg-transparent border-none py-0 pr-7 text-sm font-semibold text-primary focus:ring-0 cursor-pointer text-right">
+<option>Futuriste</option>
+<option>Cosmic</option>
+<option>Défaut</option>
+</select>
+<span class="material-symbols-outlined text-primary absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none" style="font-size: 20px;">expand_more</span>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-gray-400 dark:text-gray-500" style="font-size: 20px;">vibration</span>
+<p class="text-sm font-medium text-gray-700 dark:text-gray-300">Vibration</p>
+</div>
+<label class="relative flex h-[24px] w-[40px] cursor-pointer items-center rounded-full border-none bg-gray-300 dark:bg-[#283539] p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary transition-colors">
+<div class="h-full w-[20px] rounded-full bg-white shadow-sm"></div>
+<input checked="" class="invisible absolute" type="checkbox"/>
+</label>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark border-y border-gray-200 dark:border-white/5 sm:border sm:rounded-xl sm:mx-4 overflow-hidden opacity-75">
+<div class="flex items-center gap-4 px-4 py-4 justify-between">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center rounded-lg bg-gray-100 dark:bg-[#283539] shrink-0 size-10 text-gray-500">
+<span class="material-symbols-outlined" style="font-size: 24px;">add_alert</span>
+</div>
+<div>
+<p class="text-base font-medium leading-normal">Alertes de Prix</p>
+</div>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-gray-300 dark:bg-[#283539] p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary transition-colors">
+<div class="h-full w-[27px] rounded-full bg-white shadow-sm"></div>
+<input class="invisible absolute" type="checkbox"/>
+</label>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-8 mb-4">
+<h3 class="text-sm font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400 px-6 pb-3">Intégrations Externes</h3>
+<div class="px-4 flex flex-col gap-3">
+<div class="flex items-center justify-between p-3 rounded-xl bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-white/5">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-sky-500 flex items-center justify-center text-white">
+<span class="material-symbols-outlined" style="font-size: 20px;">send</span>
+</div>
+<div>
+<p class="text-sm font-medium">Telegram Bot</p>
+<p class="text-xs text-primary">Connecté: @MelonTrader01</p>
+</div>
+</div>
+<button class="text-xs font-semibold text-gray-500 dark:text-gray-400 px-3 py-1.5 rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-white/5 transition">
+                        Configurer
+                    </button>
+</div>
+<div class="flex items-center justify-between p-3 rounded-xl bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-white/5">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-indigo-500 flex items-center justify-center text-white">
+<span class="material-symbols-outlined" style="font-size: 20px;">forum</span>
+</div>
+<div>
+<p class="text-sm font-medium">Discord Webhook</p>
+<p class="text-xs text-gray-500 dark:text-gray-400">Non connecté</p>
+</div>
+</div>
+<button class="text-xs font-semibold text-primary px-3 py-1.5 rounded-lg bg-primary/10 hover:bg-primary/20 transition">
+                        Connecter
+                    </button>
+</div>
+</div>
+</div>
+<div class="mt-8">
+<div class="flex items-center justify-between px-6 pb-3">
+<h3 class="text-sm font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">Historique des Notifications</h3>
+<button class="text-xs font-semibold text-primary hover:text-primary/80 transition-colors">
+            Tout marquer comme lu
+        </button>
+</div>
+<div class="px-4 mb-4 flex gap-2 overflow-x-auto pb-2 no-scrollbar" style="scrollbar-width: none; -ms-overflow-style: none;">
+<button class="px-4 py-1.5 bg-primary text-white rounded-full text-xs font-semibold shadow-sm shadow-primary/25 shrink-0 transition-transform active:scale-95">
+            Tout
+        </button>
+<button class="px-4 py-1.5 bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-white/10 text-gray-600 dark:text-gray-300 rounded-full text-xs font-semibold hover:bg-gray-50 dark:hover:bg-white/5 transition-colors shrink-0">
+            Trading
+        </button>
+<button class="px-4 py-1.5 bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-white/10 text-gray-600 dark:text-gray-300 rounded-full text-xs font-semibold hover:bg-gray-50 dark:hover:bg-white/5 transition-colors shrink-0">
+            Sécurité
+        </button>
+<button class="px-4 py-1.5 bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-white/10 text-gray-600 dark:text-gray-300 rounded-full text-xs font-semibold hover:bg-gray-50 dark:hover:bg-white/5 transition-colors shrink-0">
+            Info
+        </button>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark border-y border-gray-200 dark:border-white/5 sm:border sm:rounded-xl sm:mx-4 overflow-hidden">
+<div class="group flex gap-4 p-4 border-b border-gray-100 dark:border-white/5 relative hover:bg-gray-50 dark:hover:bg-white/5 transition-colors cursor-pointer bg-primary/[0.04] dark:bg-primary/[0.02]">
+<div class="absolute right-4 top-4 size-2 rounded-full bg-primary ring-4 ring-white dark:ring-[#16262c]"></div>
+<div class="flex items-center justify-center rounded-lg bg-green-500/10 text-green-600 dark:bg-green-500/20 dark:text-green-400 shrink-0 size-10">
+<span class="material-symbols-outlined" style="font-size: 20px;">bolt</span>
+</div>
+<div class="flex-1 pr-4">
+<div class="flex justify-between items-start mb-1">
+<p class="text-sm font-bold text-slate-900 dark:text-white">Ordre Exécuté</p>
+<span class="text-xs font-medium text-primary">14:32</span>
+</div>
+<p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-2">
+                    Votre ordre d'achat pour <span class="font-semibold text-slate-900 dark:text-white">BTC/USDT</span> a été rempli à 64,230$.
+                </p>
+</div>
+</div>
+<div class="group flex gap-4 p-4 border-b border-gray-100 dark:border-white/5 relative hover:bg-gray-50 dark:hover:bg-white/5 transition-colors cursor-pointer">
+<div class="flex items-center justify-center rounded-lg bg-red-500/10 text-red-600 dark:bg-red-500/20 dark:text-red-400 shrink-0 size-10">
+<span class="material-symbols-outlined" style="font-size: 20px;">trending_down</span>
+</div>
+<div class="flex-1 pr-2">
+<div class="flex justify-between items-start mb-1">
+<p class="text-sm font-bold text-slate-900 dark:text-white">Stop-Loss Déclenché</p>
+<span class="text-xs font-medium text-gray-500">Hier</span>
+</div>
+<p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed line-clamp-2">
+                    Position sur <span class="font-medium">ETH/USDT</span> clôturée automatiquement. PnL réalisé: -2.4%.
+                </p>
+</div>
+</div>
+<div class="group flex gap-4 p-4 relative hover:bg-gray-50 dark:hover:bg-white/5 transition-colors cursor-pointer">
+<div class="flex items-center justify-center rounded-lg bg-purple-500/10 text-purple-600 dark:bg-purple-500/20 dark:text-purple-400 shrink-0 size-10">
+<span class="material-symbols-outlined" style="font-size: 20px;">smart_toy</span>
+</div>
+<div class="flex-1 pr-2">
+<div class="flex justify-between items-start mb-1">
+<p class="text-sm font-bold text-slate-900 dark:text-white">Signal IA: Solana</p>
+<span class="text-xs font-medium text-gray-500">22 Oct</span>
+</div>
+<p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed line-clamp-2">
+                    Nouvelle opportunité de scalping détectée. Confiance: 85%.
+                </p>
+</div>
+</div>
+</div>
+<button class="w-full py-4 text-xs font-semibold text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors flex items-center justify-center gap-1">
+        Voir plus d'historique
+        <span class="material-symbols-outlined" style="font-size: 16px;">expand_more</span>
+</button>
+</div>
+</main>
+<div class="fixed bottom-0 left-0 w-full bg-background-light/90 dark:bg-background-dark/90 backdrop-blur border-t border-gray-200 dark:border-white/10 p-4 z-40">
+<div class="max-w-lg mx-auto flex gap-4">
+<button class="flex-1 py-3 rounded-xl text-sm font-bold text-gray-600 dark:text-gray-300 bg-transparent border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-white/5">
+                Réinitialiser
+            </button>
+<button class="flex-1 py-3 rounded-xl text-sm font-bold text-white bg-primary shadow-lg shadow-primary/25 hover:bg-primary/90 transition-all">
+                Sauvegarder
+            </button>
+</div>
+</div>
+</body></html>

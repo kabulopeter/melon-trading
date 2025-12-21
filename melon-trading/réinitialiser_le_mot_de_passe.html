@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Réinitialiser le Mot de Passe - Melon Trading</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13b6ec",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#101d22",
+                        "surface-dark": "#1A262B",
+                        "border-dark": "#3b4d54",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display antialiased">
+<!-- Root Container -->
+<div class="relative flex h-full min-h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden transition-colors duration-200">
+<!-- Header / Navigation -->
+<div class="flex items-center p-4 pb-2 justify-between sticky top-0 z-10 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md">
+<button aria-label="Retour" class="text-slate-900 dark:text-white flex size-12 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-[24px]">arrow_back_ios_new</span>
+</button>
+</div>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col px-6 pt-4 pb-8 max-w-[600px] mx-auto w-full">
+<!-- Icon/Branding Area -->
+<div class="flex justify-start pt-4 pb-6">
+<div class="size-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[32px]">lock_reset</span>
+</div>
+</div>
+<!-- Headline -->
+<h1 class="text-slate-900 dark:text-white tracking-tight text-[32px] font-bold leading-tight text-left pb-3">
+                Réinitialiser le<br/>Mot de Passe
+            </h1>
+<!-- Body Text -->
+<p class="text-slate-600 dark:text-slate-300 text-base font-normal leading-relaxed pb-8 pt-1">
+                Entrez l'adresse e-mail associée à votre compte Melon-Trading et nous vous enverrons un lien sécurisé pour réinitialiser votre mot de passe.
+            </p>
+<!-- Form Section -->
+<form class="flex flex-col gap-6 w-full" onsubmit="event.preventDefault();">
+<!-- Email Input -->
+<div class="flex flex-col gap-2">
+<label class="text-slate-900 dark:text-white text-base font-medium leading-normal" for="email">
+                        Adresse e-mail
+                    </label>
+<div class="relative">
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-slate-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-gray-300 dark:border-border-dark bg-white dark:bg-surface-dark focus:border-primary h-14 placeholder:text-slate-400 dark:placeholder:text-[#9db2b9] px-[15px] text-base font-normal leading-normal transition-all shadow-sm" id="email" placeholder="exemple@email.com" required="" type="email" value=""/>
+<!-- Optional: Icon inside input -->
+<div class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 dark:text-[#9db2b9] pointer-events-none">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</div>
+</div>
+</div>
+<!-- Submit Button -->
+<button class="group flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-14 px-5 bg-primary hover:bg-[#0fa4d6] active:scale-[0.98] transition-all duration-200 shadow-lg shadow-primary/20" type="submit">
+<span class="text-[#111618] text-base font-bold leading-normal tracking-[0.015em] flex items-center gap-2">
+                        Envoyer le lien
+                        <span class="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-1">send</span>
+</span>
+</button>
+</form>
+<!-- Spacer to push footer down on small screens if needed -->
+<div class="flex-1 min-h-[40px]"></div>
+<!-- Footer / Secondary Action -->
+<div class="flex flex-col items-center justify-center gap-4 pt-6">
+<a class="text-slate-500 dark:text-slate-400 text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[18px]">keyboard_return</span>
+                    Retour à la connexion
+                </a>
+<!-- Help Link -->
+<p class="text-center text-xs text-slate-400 dark:text-slate-500 mt-4">
+                    Besoin d'aide ? <a class="underline decoration-slate-400 underline-offset-2 hover:text-slate-300" href="#">Contacter le support</a>
+</p>
+</div>
+</main>
+<!-- Bottom spacing for iOS safe area -->
+<div class="h-6 w-full"></div>
+</div>
+</body></html>

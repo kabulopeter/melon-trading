@@ -60,11 +60,15 @@ class UserProfile(models.Model):
     
     avatar_url = models.URLField(max_length=500, null=True, blank=True)
     
+    # Gamification
+    xp = models.IntegerField(default=0)
+    level = models.IntegerField(default=1)
+    
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return f"Profile: {self.user.username} ({self.kyc_status})"
+        return f"Profile: {self.user.username} (Lvl {self.level}, KYC: {self.kyc_status})"
 
 class Asset(models.Model):
     class AssetType(models.TextChoices):
@@ -245,3 +249,97 @@ class WalletTransaction(models.Model):
     
     def __str__(self):
         return f"{self.transaction_type} ({self.payment_method}) - {self.amount} - {self.status}"
+
+class StrategyProfile(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='strategy_profiles')
+    name = models.CharField(max_length=100)
+    is_active = models.BooleanField(default=False)
+    
+    # AI Confidence
+    min_confidence = models.FloatField(default=0.75, help_text="0.0 to 1.0")
+    
+    # Technical Indicators (JSON to keep it flexible)
+    # Example: {"rsi": {"enabled": true, "length": 14, "overbought": 70, "oversold": 30}, ...}
+    indicators_config = models.JSONField(default=dict, blank=True)
+    
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f"{self.name} - {self.user.username}"
+
+class RiskConfig(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='risk_config')
+    
+    risk_per_trade_percent = models.DecimalField(max_digits=5, decimal_places=2, default=2.0)
+    default_stop_loss_percent = models.DecimalField(max_digits=5, decimal_places=2, default=5.0)
+    default_take_profit_percent = models.DecimalField(max_digits=5, decimal_places=2, default=10.0)
+    
+    # Circuit Breakers
+    daily_max_loss_amount = models.DecimalField(max_digits=20, decimal_places=4, default=150.0)
+    daily_max_loss_is_percent = models.BooleanField(default=True)
+    drawdown_threshold_percent = models.DecimalField(max_digits=5, decimal_places=2, default=15.0)
+    
+    # Toggles
+    auto_sizing_enabled = models.BooleanField(default=True)
+    risk_notifications_enabled = models.BooleanField(default=True)
+    
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f"RiskConfig: {self.user.username}"
+
+class Challenge(models.Model):
+    class Type(models.TextChoices):
+        DEPOSIT = 'DEPOSIT', _('First Deposit')
+        TRADE_COUNT = 'TRADE_COUNT', _('Trade Count Streak')
+        PNL_TARGET = 'PNL_TARGET', _('PnL Target')
+        VOLUME = 'VOLUME', _('Trading Volume')
+
+    title = models.CharField(max_length=100)
+    description = models.TextField()
+    xp_reward = models.IntegerField(default=100)
+    challenge_type = models.CharField(max_length=20, choices=Type.choices)
+    target_value = models.FloatField() # e.g. 5 trades, 100 USD, 5.0 %
+    
+    is_active = models.BooleanField(default=True)
+    icon_name = models.CharField(max_length=50, default="military_tech")
+
+    def __str__(self):
+        return self.title
+
+class UserChallenge(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='challenges')
+    challenge = models.ForeignKey(Challenge, on_delete=models.CASCADE)
+    
+    current_value = models.FloatField(default=0.0)
+    is_completed = models.BooleanField(default=False)
+    completed_at = models.DateTimeField(null=True, blank=True)
+    
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        unique_together = ('user', 'challenge')
+
+    def __str__(self):
+        return f"{self.user.username} - {self.challenge.title} ({self.current_value}/{self.challenge.target_value})"
+
+class Badge(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.TextField()
+    icon_name = models.CharField(max_length=50)
+    category = models.CharField(max_length=50, default="Trading")
+
+    def __str__(self):
+        return self.name
+
+class UserBadge(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='badges')
+    badge = models.ForeignKey(Badge, on_delete=models.CASCADE)
+    earned_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        unique_together = ('user', 'badge')
+
+    def __str__(self):
+        return f"{self.user.username} - {self.badge.name}"

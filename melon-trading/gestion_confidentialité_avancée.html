@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gestion Confidentialité Avancée - Melon-Trading</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13b6ec",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#111618", // Adjusted to match component list base color
+                        "surface-dark": "#1a2225", // Slightly lighter for cards
+                        "surface-input": "#283539", // Input/Icon bg from components
+                        "text-secondary": "#9db2b9",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased overflow-x-hidden">
+<div class="relative flex h-full min-h-screen w-full flex-col max-w-md mx-auto bg-background-light dark:bg-background-dark shadow-2xl">
+<!-- TopAppBar -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-50">
+<button class="text-slate-900 dark:text-white flex size-12 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12">Confidentialité &amp; Données</h2>
+</div>
+<!-- Privacy Score / Status Indicator -->
+<div class="px-4 py-2">
+<div class="bg-white dark:bg-surface-dark rounded-xl p-4 flex items-center gap-4 shadow-sm border border-slate-200 dark:border-transparent">
+<div class="flex items-center justify-center rounded-full bg-primary/10 size-12 shrink-0">
+<span class="material-symbols-outlined text-primary text-[28px]">shield_lock</span>
+</div>
+<div class="flex flex-col flex-1">
+<p class="text-slate-900 dark:text-white text-base font-semibold">Protection Active</p>
+<p class="text-slate-500 dark:text-text-secondary text-sm">Vos données sensibles sont chiffrées.</p>
+</div>
+<!-- Simple circular progress indicator visualization -->
+<div class="relative size-10 flex items-center justify-center">
+<svg class="size-full -rotate-90" viewbox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+<circle class="stroke-slate-200 dark:stroke-surface-input" cx="18" cy="18" fill="none" r="16" stroke-width="3"></circle>
+<circle class="stroke-primary" cx="18" cy="18" fill="none" r="16" stroke-dasharray="100" stroke-dashoffset="20" stroke-width="3"></circle>
+</svg>
+<span class="absolute text-[10px] font-bold text-primary">80%</span>
+</div>
+</div>
+</div>
+<!-- Intro Text -->
+<div class="px-4 pb-4 pt-2">
+<p class="text-slate-600 dark:text-text-secondary text-sm font-normal leading-normal">
+                Contrôlez la manière dont Melon-Trading utilise vos données pour améliorer votre expérience. Vos choix sont appliqués immédiatement.
+            </p>
+</div>
+<!-- Settings List -->
+<div class="flex flex-col gap-1">
+<!-- Item 1: AI -->
+<div class="flex gap-4 bg-background-light dark:bg-background-dark px-4 py-3 justify-between items-center hover:bg-black/5 dark:hover:bg-white/5 transition-colors cursor-pointer group">
+<div class="flex items-start gap-4">
+<div class="text-slate-700 dark:text-white flex items-center justify-center rounded-xl bg-slate-200 dark:bg-surface-input shrink-0 size-12 transition-colors group-hover:dark:bg-[#344247]">
+<span class="material-symbols-outlined text-[24px]">psychology</span>
+</div>
+<div class="flex flex-1 flex-col justify-center">
+<p class="text-slate-900 dark:text-white text-base font-medium leading-normal">Amélioration de l'IA</p>
+<p class="text-slate-500 dark:text-text-secondary text-xs sm:text-sm font-normal leading-normal">Partager des données anonymisées.</p>
+</div>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-slate-300 dark:bg-surface-input p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary transition-all duration-200">
+<div class="h-full w-[27px] rounded-full bg-white shadow-sm" style="box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px, rgba(0, 0, 0, 0.06) 0px 3px 1px;"></div>
+<input checked="" class="peer sr-only" type="checkbox"/>
+</label>
+</div>
+</div>
+<!-- Item 2: Ads -->
+<div class="flex gap-4 bg-background-light dark:bg-background-dark px-4 py-3 justify-between items-center hover:bg-black/5 dark:hover:bg-white/5 transition-colors cursor-pointer group">
+<div class="flex items-start gap-4">
+<div class="text-slate-700 dark:text-white flex items-center justify-center rounded-xl bg-slate-200 dark:bg-surface-input shrink-0 size-12 transition-colors group-hover:dark:bg-[#344247]">
+<span class="material-symbols-outlined text-[24px]">campaign</span>
+</div>
+<div class="flex flex-1 flex-col justify-center">
+<p class="text-slate-900 dark:text-white text-base font-medium leading-normal">Publicité Personnalisée</p>
+<p class="text-slate-500 dark:text-text-secondary text-xs sm:text-sm font-normal leading-normal">Offres ciblées selon votre activité.</p>
+</div>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-slate-300 dark:bg-surface-input p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary transition-all duration-200">
+<div class="h-full w-[27px] rounded-full bg-white shadow-sm" style="box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px, rgba(0, 0, 0, 0.06) 0px 3px 1px;"></div>
+<input class="peer sr-only" type="checkbox"/>
+</label>
+</div>
+</div>
+<!-- Item 3: Contacts -->
+<div class="flex gap-4 bg-background-light dark:bg-background-dark px-4 py-3 justify-between items-center hover:bg-black/5 dark:hover:bg-white/5 transition-colors cursor-pointer group">
+<div class="flex items-start gap-4">
+<div class="text-slate-700 dark:text-white flex items-center justify-center rounded-xl bg-slate-200 dark:bg-surface-input shrink-0 size-12 transition-colors group-hover:dark:bg-[#344247]">
+<span class="material-symbols-outlined text-[24px]">contacts</span>
+</div>
+<div class="flex flex-1 flex-col justify-center">
+<p class="text-slate-900 dark:text-white text-base font-medium leading-normal">Accès aux Contacts</p>
+<p class="text-slate-500 dark:text-text-secondary text-xs sm:text-sm font-normal leading-normal">Synchronisation avec vos amis.</p>
+</div>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-slate-300 dark:bg-surface-input p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary transition-all duration-200">
+<div class="h-full w-[27px] rounded-full bg-white shadow-sm" style="box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px, rgba(0, 0, 0, 0.06) 0px 3px 1px;"></div>
+<input checked="" class="peer sr-only" type="checkbox"/>
+</label>
+</div>
+</div>
+<!-- Item 4: Cookies (New) -->
+<div class="flex gap-4 bg-background-light dark:bg-background-dark px-4 py-3 justify-between items-center hover:bg-black/5 dark:hover:bg-white/5 transition-colors cursor-pointer group">
+<div class="flex items-start gap-4">
+<div class="text-slate-700 dark:text-white flex items-center justify-center rounded-xl bg-slate-200 dark:bg-surface-input shrink-0 size-12 transition-colors group-hover:dark:bg-[#344247]">
+<span class="material-symbols-outlined text-[24px]">cookie</span>
+</div>
+<div class="flex flex-1 flex-col justify-center">
+<p class="text-slate-900 dark:text-white text-base font-medium leading-normal">Traceurs &amp; Cookies</p>
+<p class="text-slate-500 dark:text-text-secondary text-xs sm:text-sm font-normal leading-normal">Gestion des analyses tierces.</p>
+</div>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-slate-300 dark:bg-surface-input p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary transition-all duration-200">
+<div class="h-full w-[27px] rounded-full bg-white shadow-sm" style="box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px, rgba(0, 0, 0, 0.06) 0px 3px 1px;"></div>
+<input class="peer sr-only" type="checkbox"/>
+</label>
+</div>
+</div>
+</div>
+<div class="flex-1 min-h-[40px]"></div>
+<!-- Action Buttons -->
+<div class="p-4 flex flex-col gap-3 pb-8">
+<button class="w-full h-12 flex items-center justify-center rounded-xl bg-primary text-background-dark font-bold text-base hover:bg-primary/90 transition-colors shadow-[0_0_15px_rgba(19,182,236,0.3)]">
+                Enregistrer les préférences
+            </button>
+<button class="w-full h-10 flex items-center justify-center rounded-xl bg-transparent text-primary text-sm font-medium hover:bg-primary/5 transition-colors">
+                Restaurer les paramètres par défaut
+            </button>
+</div>
+<!-- Footer Legal -->
+<div class="px-6 pb-6 text-center">
+<p class="text-[10px] text-slate-400 dark:text-[#586e75]">
+                En utilisant Melon-Trading, vous acceptez notre <a class="underline text-slate-500 dark:text-[#9db2b9]" href="#">Politique de Confidentialité</a>.
+            </p>
+</div>
+</div>
+</body></html>

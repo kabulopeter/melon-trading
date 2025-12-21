@@ -1,0 +1,80 @@
+  Widget _buildDrawer() {
+    return Drawer(
+      backgroundColor: const Color(0xFF0F172A),
+      child: ListView(
+        padding: EdgeInsets.zero,
+        children: [
+          UserAccountsDrawerHeader(
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                colors: [Colors.blue, Colors.purple],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+              ),
+            ),
+            currentAccountPicture: const CircleAvatar(
+              backgroundColor: Colors.white,
+              child: Icon(Icons.person, color: Colors.blue, size: 40),
+            ),
+            accountName: const Text(
+              "Demo User",
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+            ),
+            accountEmail: const Text(
+              "ID: 883920 • Premium",
+              style: TextStyle(color: Colors.white70),
+            ),
+          ),
+          _buildDrawerItem(Icons.dashboard, "Dashboard", true, () {
+            Navigator.pop(context);
+          }),
+          _buildDrawerItem(Icons.account_balance_wallet, "Portefeuille", false, () {
+            Navigator.pop(context);
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const WalletScreen()),
+            );
+          }),
+          _buildDrawerItem(Icons.person, "Profil", false, () {
+            Navigator.pop(context);
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const ProfileScreen()),
+            );
+          }),
+          _buildDrawerItem(Icons.settings, "Paramètres", false, () {
+            Navigator.pop(context);
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const SettingsScreen()),
+            );
+          }),
+          const Divider(color: Colors.white10),
+          _buildDrawerItem(Icons.logout, "Déconnexion", false, () {
+            Navigator.pushAndRemoveUntil(
+              context,
+              MaterialPageRoute(builder: (context) => const OnboardingScreen()),
+              (route) => false,
+            );
+          }, color: Colors.red),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildDrawerItem(IconData icon, String title, bool selected, VoidCallback onTap, {Color color = Colors.white}) {
+    return ListTile(
+      leading: Icon(icon, color: selected ? Colors.blue : color),
+      title: Text(
+        title,
+        style: TextStyle(
+          color: selected ? Colors.blue : color,
+          fontWeight: selected ? FontWeight.bold : FontWeight.normal,
+        ),
+      ),
+      selected: selected,
+      selectedTileColor: Colors.blue.withOpacity(0.1),
+      onTap: onTap,
+    );
+  }
+}

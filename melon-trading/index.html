@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Melon-Trading Onboarding</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Tailwind Configuration -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13b6ec",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#101d22",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        /* Custom utilities for hiding scrollbar but keeping functionality */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display antialiased text-slate-900 dark:text-white h-screen overflow-hidden flex flex-col selection:bg-primary selection:text-background-dark">
+    <!-- Top Navigation / Skip -->
+    <div class="flex items-center justify-end p-6 w-full z-10 shrink-0">
+        <a href="connexion.html"
+            class="text-slate-500 dark:text-slate-400 text-sm font-semibold tracking-wide hover:text-primary transition-colors">
+            Passer
+        </a>
+    </div>
+    <!-- Main Carousel Content -->
+    <div class="flex-1 w-full overflow-x-auto snap-x snap-mandatory scrollbar-hide flex items-center">
+        <!-- Slide 1 -->
+        <div class="min-w-full snap-center flex flex-col items-center justify-center px-6">
+            <div class="w-full max-w-xs aspect-square mb-10 relative">
+                <!-- Decorative blurred glow behind image -->
+                <div class="absolute inset-4 bg-primary/20 blur-3xl rounded-full"></div>
+                <div class="w-full h-full bg-center bg-no-repeat bg-cover rounded-3xl shadow-2xl relative z-10 border border-white/5"
+                    data-alt="Futuristic digital brain visualization with glowing nodes representing artificial intelligence"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA0lO3SkG3dAgxschIaN-EiPYHg_0T8U2zSXfOoyk4MI1musDJJUzgLZBCMuIjN1N7j6qL4bGYF3D5zoimERexVPgr5TKMGjsvYY8MdUCFd7wxOhyOQr_1q7UyE4lqf2U1WcUg4MckXsTS1DpAY2Y63Vqh2nl17Osy38wegBCVJfp_tlW2_ASSzdkGdEM1ouWftOacVH3WSn8CXC3wDJ5S61ZR5k4mP8zxEZSU4UI7oUXkRZIZGFDZHtRJK6EjRAYwHMfz9pOPbDJKu");'>
+                </div>
+            </div>
+            <div class="text-center max-w-sm mx-auto">
+                <h2 class="text-3xl font-extrabold leading-tight mb-4 text-slate-900 dark:text-white">
+                    Trading Automatisé <br />par <span class="text-primary">IA</span>
+                </h2>
+                <p class="text-slate-500 dark:text-slate-400 text-base leading-relaxed">
+                    Laissez nos algorithmes intelligents optimiser vos positions 24/7 sans que vous leviez le petit
+                    doigt.
+                </p>
+            </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="min-w-full snap-center flex flex-col items-center justify-center px-6">
+            <div class="w-full max-w-xs aspect-square mb-10 relative">
+                <!-- Decorative blurred glow behind image -->
+                <div class="absolute inset-4 bg-purple-500/20 blur-3xl rounded-full"></div>
+                <div class="w-full h-full bg-center bg-no-repeat bg-cover rounded-3xl shadow-2xl relative z-10 border border-white/5"
+                    data-alt="Abstract 3D shield illustration glowing blue representing security and protection"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAuyfjk3NpoPn5lHE-itnorbVF8sVmp8zKBJ6F6Xvz1_3H-urVKrN-PCkS_mssP-3mX2EkLWMSagc7RFfxWqJu-3sG3_Rh2cJaNqzj37OD4rzHbyjG3fV_9j3rTr4iZDWP1H_mPM3utjhBDe7LcsJ1c6MKBMgofx5lCAzT_dynisWP1lPuQ1samjfZv12lZ7Z7DBqckGFInOMnCfwN_AnEs7Nlafss5VN6OO88P9gNPCTLwHbG40OIon1kMZCaJya00dSSYbW-3JkUC");'>
+                </div>
+            </div>
+            <div class="text-center max-w-sm mx-auto">
+                <h2 class="text-3xl font-extrabold leading-tight mb-4 text-slate-900 dark:text-white">
+                    Gestion des <br /><span class="text-primary">Risques</span>
+                </h2>
+                <p class="text-slate-500 dark:text-slate-400 text-base leading-relaxed">
+                    Protégez votre capital avec des outils de stop-loss dynamiques et une sécurité de niveau bancaire.
+                </p>
+            </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="min-w-full snap-center flex flex-col items-center justify-center px-6">
+            <div class="w-full max-w-xs aspect-square mb-10 relative">
+                <!-- Decorative blurred glow behind image -->
+                <div class="absolute inset-4 bg-emerald-500/20 blur-3xl rounded-full"></div>
+                <div class="w-full h-full bg-center bg-no-repeat bg-cover rounded-3xl shadow-2xl relative z-10 border border-white/5"
+                    data-alt="Modern data dashboard analytics interface floating in dark space"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA1ImvOg6U5L_EgRWvqPMice9635RedlamINfA2OxwV6Muf2KM3KE23UaLuusUX8btCI55fPC9DG6s5DvlWG3alMv2QtITzIlEjASzys5bVMmpRGFA_whhv1PA6OLCMxExOLce7vMI9Xi5sHeJ0YWIyv8zfJv8sbRbPxS1y9XfLnYVB8y3NbXb5IHAMkOPTuiHpVqMcuRTaKGKfrgCPe8sJVysBRUUA6V1xi2vz8u5hWg-KSnd78tLd82yRqdkfi1lbPRXYYKDeD5Ag");'>
+                </div>
+            </div>
+            <div class="text-center max-w-sm mx-auto">
+                <h2 class="text-3xl font-extrabold leading-tight mb-4 text-slate-900 dark:text-white">
+                    Analyses de <br /><span class="text-primary">Performance</span>
+                </h2>
+                <p class="text-slate-500 dark:text-slate-400 text-base leading-relaxed">
+                    Visualisez vos gains avec précision et ajustez votre stratégie en temps réel grâce à nos outils.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Bottom Actions Area -->
+    <div class="flex flex-col items-center w-full px-6 py-8 pb-10 shrink-0">
+        <!-- Page Indicators -->
+        <div class="flex flex-row items-center justify-center gap-3 mb-8">
+            <div class="h-2 w-8 rounded-full bg-primary transition-all duration-300"></div>
+            <div class="h-2 w-2 rounded-full bg-slate-300 dark:bg-slate-700 transition-all duration-300"></div>
+            <div class="h-2 w-2 rounded-full bg-slate-300 dark:bg-slate-700 transition-all duration-300"></div>
+        </div>
+        <!-- Primary Action Button -->
+        <a href="inscription.html"
+            class="w-full max-w-sm group relative flex items-center justify-center overflow-hidden rounded-full h-14 bg-primary hover:bg-[#0fa6d8] transition-all duration-300 shadow-[0_0_20px_-5px_rgba(19,182,236,0.4)] hover:shadow-[0_0_25px_-5px_rgba(19,182,236,0.6)]">
+            <span class="relative z-10 text-background-dark text-lg font-bold tracking-wide">Démarrer</span>
+            <div
+                class="absolute inset-0 flex items-center justify-end px-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span class="material-symbols-outlined text-background-dark">arrow_forward</span>
+            </div>
+        </a>
+        <!-- Login Link -->
+        <div class="mt-6 flex items-center gap-2">
+            <span class="text-sm text-slate-500 dark:text-slate-400">Déjà un compte ?</span>
+            <a href="connexion.html" class="text-sm font-semibold text-primary hover:text-white transition-colors">
+                Connexion
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>

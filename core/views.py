@@ -4,7 +4,8 @@ from rest_framework.response import Response
 from django_filters.rest_framework import DjangoFilterBackend
 from .models import (
     Asset, PriceHistory, Trade, Signal, UserWallet, WalletTransaction, 
-    UserPreference, UserProfile, MarketAlert
+    UserPreference, UserProfile, MarketAlert, StrategyProfile, RiskConfig,
+    Challenge, UserChallenge, Badge, UserBadge
 )
 from .serializers import (
     AssetSerializer,
@@ -17,7 +18,13 @@ from .serializers import (
     TransferRequestSerializer,
     UserPreferenceSerializer,
     UserProfileSerializer,
-    MarketAlertSerializer
+    MarketAlertSerializer,
+    StrategyProfileSerializer,
+    RiskConfigSerializer,
+    ChallengeSerializer,
+    UserChallengeSerializer,
+    BadgeSerializer,
+    UserBadgeSerializer
 )
 from .services.payment_service import PaymentService
 
@@ -305,3 +312,94 @@ class AlertViewSet(viewsets.ModelViewSet):
         else:
             from django.contrib.auth.models import User
             serializer.save(user=User.objects.first())
+
+class StrategyProfileViewSet(viewsets.ModelViewSet):
+    serializer_class = StrategyProfileSerializer
+    permission_classes = [permissions.AllowAny]
+
+    def get_queryset(self):
+        user = self.get_user(self.request)
+        return StrategyProfile.objects.filter(user=user)
+
+    def get_user(self, request):
+        if request.user.is_authenticated: return request.user
+        from django.contrib.auth.models import User
+        return User.objects.first()
+
+    def perform_create(self, serializer):
+        serializer.save(user=self.get_user(self.request))
+
+class RiskConfigViewSet(viewsets.GenericViewSet):
+    serializer_class = RiskConfigSerializer
+    permission_classes = [permissions.AllowAny]
+
+    def get_user(self, request):
+        if request.user.is_authenticated: return request.user
+        from django.contrib.auth.models import User
+        return User.objects.first()
+
+    @action(detail=False, methods=['get', 'patch'])
+    def current(self, request):
+        user = self.get_user(request)
+        config, _ = RiskConfig.objects.get_or_create(user=user)
+        if request.method == 'PATCH':
+            # Verify if user has enough level for some aggressive settings
+            serializer = RiskConfigSerializer(config, data=request.data, partial=True)
+            if serializer.is_valid():
+                serializer.save()
+                return Response(serializer.data)
+            return Response(serializer.errors, status=400)
+        return Response(RiskConfigSerializer(config).data)
+
+class ChallengeViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = Challenge.objects.filter(is_active=True)
+    serializer_class = ChallengeSerializer
+    permission_classes = [permissions.AllowAny]
+
+    def get_user(self, request):
+        if request.user.is_authenticated: return request.user
+        from django.contrib.auth.models import User
+        return User.objects.first()
+
+    @action(detail=False, methods=['get'])
+    def mine(self, request):
+        user = self.get_user(request)
+        user_challenges = UserChallenge.objects.filter(user=user)
+        # Ensure all active challenges exist for user
+        active_challenges = Challenge.objects.filter(is_active=True)
+        for c in active_challenges:
+            UserChallenge.objects.get_or_create(user=user, challenge=c)
+        
+        serializer = UserChallengeSerializer(user_challenges, many=True)
+        return Response(serializer.data)
+
+    @action(detail=False, methods=['get'])
+    def leaderboard(self, request):
+        # Leaderboard by XP
+        top_profiles = UserProfile.objects.all().order_by('-xp')[:10]
+        data = []
+        for p in top_profiles:
+            data.append({
+                "username": p.user.username,
+                "xp": p.xp,
+                "level": p.level,
+                "avatar_url": p.avatar_url
+            })
+        return Response(data)
+
+class BadgeViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = Badge.objects.all()
+    serializer_class = BadgeSerializer
+    permission_classes = [permissions.AllowAny]
+
+    def get_user(self, request):
+        if request.user.is_authenticated: return request.user
+        from django.contrib.auth.models import User
+        return User.objects.first()
+
+    @action(detail=False, methods=['get'])
+    def mine(self, request):
+        user = self.get_user(request)
+        user_badges = UserBadge.objects.filter(user=user)
+        serializer = UserBadgeSerializer(user_badges, many=True)
+        return Response(serializer.data)
