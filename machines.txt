@@ -1,0 +1,10 @@
+4 machines have been retrieved from app melon-trading.
+]8;;https://fly.io/apps/melon-trading/machines/View them in the UI here]8;;
+
+[1mmelon-trading[0m
+ID            	NAME                	STATE  	CHECKS	REGION	ROLE	IMAGE                                              	IP ADDRESS                      	VOLUME	CREATED             	LAST UPDATED        	PROCESS GROUP	SIZE                 
+0807660f165938	weathered-grass-1384	started	      	iad   	    	melon-trading:deployment-01KD2ZEV2Y95T6N7W0JYPKBNFP	fdaa:3a:49fb:a7b:576:3b52:6170:2	      	2025-12-22T01:02:14Z	2025-12-22T12:13:23Z	celery       	shared-cpu-1x:1024MB	
+7817172b5d63e8	twilight-sun-2224   	stopped	      	iad   	    	melon-trading:deployment-01KD2ZEV2Y95T6N7W0JYPKBNFP	fdaa:3a:49fb:a7b:56e:a436:d621:2	      	2025-12-22T01:01:39Z	2025-12-22T12:13:23Z	app          	shared-cpu-1x:1024MB	
+e822717a6952d8	dry-smoke-1839      	started	      	iad   	    	melon-trading:deployment-01KD2ZEV2Y95T6N7W0JYPKBNFP	fdaa:3a:49fb:a7b:40a:309f:1ca5:2	      	2025-12-22T01:01:00Z	2025-12-22T12:13:26Z	app          	shared-cpu-1x:1024MB	
+2874544c7e2e48	dry-butterfly-1438  	stopped	      	iad   	    	melon-trading:deployment-01KD2ZEV2Y95T6N7W0JYPKBNFP	fdaa:3a:49fb:a7b:f6:e07a:53c9:2 	      	2025-12-22T01:02:47Z	2025-12-22T12:13:23Z	celery       	shared-cpu-1x:1024MB	
+

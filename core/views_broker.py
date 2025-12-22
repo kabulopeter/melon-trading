@@ -24,5 +24,11 @@ class BrokerViewSet(viewsets.ModelViewSet):
         from django.contrib.auth.models import User
         user = self.request.user
         if not user.is_authenticated:
+            # Fallback to the first available user for demo purposes
             user = User.objects.first()
-        serializer.save(user=user)
+            
+        if user:
+            serializer.save(user=user)
+        else:
+            # This should not happen if ensure_user.py was run, but good to handle
+            raise serializers.ValidationError({"detail": "No user found in the system. Please create a user first."})

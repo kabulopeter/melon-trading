@@ -16,7 +16,7 @@ console_command = '/code/manage.py shell'
   PORT = '8000'
 
 [processes]
-  app = 'daphne -b 0.0.0.0 -p 8000 config.asgi'
+  app = 'daphne -b 0.0.0.0 -p 8000 config.asgi:application'
   celery = 'celery -A config worker --loglevel=INFO'
 
 [http_service]
