@@ -80,9 +80,9 @@ ASGI_APPLICATION = 'config.asgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.getenv('DATABASE_URL', 'postgresql://postgres:postgres@db:5432/melon_trading'),
+        default=os.getenv('DATABASE_URL'),
         conn_max_age=600,
-        ssl_require=False
+        ssl_require=True
     )
 }
 
