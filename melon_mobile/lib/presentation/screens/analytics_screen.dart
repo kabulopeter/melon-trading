@@ -2,7 +2,6 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import '../../data/services/api_service.dart';
 import '../../data/services/analytics_service.dart';
-import '../../data/models/performance_model.dart';
 import '../widgets/skeleton_loading.dart';
 
 class AnalyticsScreen extends StatefulWidget {

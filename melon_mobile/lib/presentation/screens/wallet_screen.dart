@@ -1,4 +1,3 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import '../../data/services/api_service.dart';
 import '../../data/services/wallet_service.dart';
@@ -158,7 +157,7 @@ class _WalletScreenState extends State<WalletScreen> {
                 children: [
                   Expanded(
                     child: ElevatedButton.icon(
-                      onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const DepositScreen())),
+                      onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const DepositScreen())).then((_) => _loadWalletData()),
                       icon: const Icon(Icons.add_card, size: 18),
                       label: const Text("Dépôt"),
                       style: ElevatedButton.styleFrom(backgroundColor: Colors.white, foregroundColor: const Color(0xFF0f172a), padding: const EdgeInsets.symmetric(vertical: 14), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12))),
@@ -167,7 +166,7 @@ class _WalletScreenState extends State<WalletScreen> {
                   const SizedBox(width: 12),
                   Expanded(
                     child: ElevatedButton.icon(
-                      onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const WithdrawScreen())),
+                      onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const WithdrawScreen())).then((_) => _loadWalletData()),
                       icon: const Icon(Icons.arrow_outward, size: 18),
                       label: const Text("Retrait"),
                       style: ElevatedButton.styleFrom(backgroundColor: Colors.white12, foregroundColor: Colors.white, padding: const EdgeInsets.symmetric(vertical: 14), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12))),
@@ -407,7 +406,7 @@ class _WalletScreenState extends State<WalletScreen> {
                 const SizedBox(height: 4),
                 Row(
                   children: [
-                    Container(padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 1), decoration: BoxDecoration(color: Colors.white10, borderRadius: BorderRadius.circular(4)), child: Text("TXN-${tx.id.toString().substring(0, 5)}", style: const TextStyle(color: Colors.white38, fontSize: 8, fontFamily: 'monospace'))),
+                    Container(padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 1), decoration: BoxDecoration(color: Colors.white10, borderRadius: BorderRadius.circular(4)), child: Text("TXN-${tx.id.toString().padLeft(5, '0')}", style: const TextStyle(color: Colors.white38, fontSize: 8, fontFamily: 'monospace'))),
                     const SizedBox(width: 8),
                     Text(DateFormat('HH:mm').format(DateTime.parse(tx.createdAt)), style: const TextStyle(color: Colors.white38, fontSize: 10)),
                   ],

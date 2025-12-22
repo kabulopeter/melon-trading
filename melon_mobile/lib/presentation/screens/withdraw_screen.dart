@@ -15,7 +15,40 @@ class _WithdrawScreenState extends State<WithdrawScreen> {
   final TextEditingController _otpCtrl = TextEditingController();
   final WalletService _walletService = WalletService(ApiService());
   bool _isLoading = false;
-  String _selectedMethod = 'mpesa';
+  String _selectedMethod = 'MPESA';
+
+  Future<void> _initiateWithdrawal() async {
+    final amount = _amountCtrl.text.trim();
+    if (amount.isEmpty || double.tryParse(amount) == null) {
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Veuillez entrer un montant valide")));
+      return;
+    }
+
+    setState(() => _isLoading = true);
+    HapticFeedback.heavyImpact();
+
+    try {
+      final tx = await _walletService.initiateWithdrawal(
+        amount: amount,
+        method: _selectedMethod,
+        phoneNumber: "0810000000",
+      );
+
+      if (mounted) {
+        if (tx != null) {
+          ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Retrait initié. Les fonds seront transférés après validation.")));
+          Navigator.pop(context, true);
+        } else {
+          // If 403, it's usually KYC issue
+          ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Erreur lors de l'initiation du retrait. Vérifiez votre solde ou KYC.")));
+        }
+      }
+    } catch (e) {
+      if (mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Erreur: $e")));
+    } finally {
+      if (mounted) setState(() => _isLoading = false);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -105,9 +138,9 @@ class _WithdrawScreenState extends State<WithdrawScreen> {
   Widget _buildWithdrawalMethods() {
     return Column(
       children: [
-        _buildMethodItem("M-Pesa Vodacom", "+243 812 ••• •89", Icons.payments, Colors.redAccent, true, 'mpesa'),
-        _buildMethodItem("Visa Débit", "•••• •••• •••• 4242", Icons.credit_card, Colors.blueAccent, false, 'visa'),
-        _buildMethodItem("Airtel Money", "+243 998 ••• •12", Icons.phonelink_ring, Colors.red, false, 'airtel'),
+        _buildMethodItem("M-Pesa Vodacom", "+243 812 ••• •89", Icons.payments, Colors.redAccent, true, 'MPESA'),
+        _buildMethodItem("Visa Débit", "•••• •••• •••• 4242", Icons.credit_card, Colors.blueAccent, false, 'CARD'),
+        _buildMethodItem("Airtel Money", "+243 998 ••• •12", Icons.phonelink_ring, Colors.red, false, 'AIRTEL'),
         _buildAddMethod(),
       ],
     );
@@ -225,7 +258,7 @@ class _WithdrawScreenState extends State<WithdrawScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Icon(Icons.info, color: Colors.orangeAccent, size: 20),
-          const SizedBox(width: 12),
+          SizedBox(width: 12),
           Expanded(child: Text("Les retraits par Mobile Money sont limités à \$500 par transaction. Pour des montants plus élevés, veuillez utiliser le virement bancaire.", style: TextStyle(color: Colors.orangeAccent, fontSize: 11, height: 1.4))),
         ],
       ),
@@ -239,11 +272,11 @@ class _WithdrawScreenState extends State<WithdrawScreen> {
       child: SizedBox(
         width: double.infinity,
         child: ElevatedButton(
-          onPressed: () {
-            HapticFeedback.heavyImpact();
-          },
+          onPressed: _isLoading ? null : _initiateWithdrawal,
           style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF13b6ec), foregroundColor: Colors.white, padding: const EdgeInsets.symmetric(vertical: 18), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)), elevation: 10, shadowColor: const Color(0xFF13b6ec).withOpacity(0.2)),
-          child: const Row(mainAxisAlignment: MainAxisAlignment.center, children: [Icon(Icons.lock, size: 18), SizedBox(width: 8), Text("Confirmer le retrait", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16))]),
+          child: _isLoading 
+            ? const SizedBox(width: 20, height: 20, child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white))
+            : const Row(mainAxisAlignment: MainAxisAlignment.center, children: [Icon(Icons.lock, size: 18), SizedBox(width: 8), Text("Confirmer le retrait", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16))]),
         ),
       ),
     );

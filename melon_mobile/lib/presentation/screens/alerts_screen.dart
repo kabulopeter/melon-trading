@@ -175,7 +175,7 @@ class _AlertsScreenState extends State<AlertsScreen> {
           const SizedBox(width: 12),
           Text(title, style: const TextStyle(color: Colors.white, fontSize: 14)),
           const Spacer(),
-          Switch(value: val, onChanged: (v) {}, activeColor: const Color(0xFF13b6ec), activeTrackColor: const Color(0xFF13b6ec).withOpacity(0.3), inactiveTrackColor: Colors.white10),
+          Switch(value: val, onChanged: (v) {}, activeThumbColor: const Color(0xFF13b6ec), activeTrackColor: const Color(0xFF13b6ec).withOpacity(0.3), inactiveTrackColor: Colors.white10),
         ],
       ),
     );

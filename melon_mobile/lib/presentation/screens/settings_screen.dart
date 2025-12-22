@@ -180,12 +180,12 @@ class _SettingsScreenState extends State<SettingsScreen> {
       leading: Container(width: 36, height: 36, decoration: BoxDecoration(color: const Color(0xFF13b6ec).withOpacity(0.1), borderRadius: BorderRadius.circular(8)), child: Icon(icon, color: const Color(0xFF13b6ec), size: 20)),
       title: Text(title, style: const TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.w500)),
       subtitle: Text(sub, style: const TextStyle(color: Colors.white38, fontSize: 11)),
-      trailing: Switch(value: val, onChanged: onChanged, activeColor: const Color(0xFF13b6ec), activeTrackColor: const Color(0xFF13b6ec).withOpacity(0.3), inactiveTrackColor: Colors.white10),
+      trailing: Switch(value: val, onChanged: onChanged, activeThumbColor: const Color(0xFF13b6ec), activeTrackColor: const Color(0xFF13b6ec).withOpacity(0.3), inactiveTrackColor: Colors.white10),
     );
   }
 
   Widget _buildLogoutButton() {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       child: OutlinedButton.icon(
         onPressed: () {},

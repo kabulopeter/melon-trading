@@ -115,7 +115,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
             ],
           ),
           const SizedBox(height: 20),
-          Container(height: 80, width: double.infinity, child: CustomPaint(painter: _PnLChartPainter(const Color(0xFF13b6ec)))),
+          SizedBox(height: 80, width: double.infinity, child: CustomPaint(painter: _PnLChartPainter(const Color(0xFF13b6ec)))),
           const SizedBox(height: 20),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,

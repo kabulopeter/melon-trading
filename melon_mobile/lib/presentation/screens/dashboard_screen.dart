@@ -573,7 +573,7 @@ class _DashboardScreenState extends State<DashboardScreen> with TickerProviderSt
             ],
           ),
           const SizedBox(height: 20),
-          Container(
+          SizedBox(
             height: 120,
             width: double.infinity,
             child: CustomPaint(painter: _MiniChartPainter(const Color(0xFF13b6ec))),

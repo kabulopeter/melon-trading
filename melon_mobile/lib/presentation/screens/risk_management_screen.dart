@@ -6,6 +6,8 @@ import 'dart:ui';
 import 'package:flutter/services.dart';
 
 class RiskManagementScreen extends StatefulWidget {
+  const RiskManagementScreen({super.key});
+
   @override
   _RiskManagementScreenState createState() => _RiskManagementScreenState();
 }
@@ -383,7 +385,7 @@ class _RiskManagementScreenState extends State<RiskManagementScreen> {
         Switch(
           value: value,
           onChanged: onChanged,
-          activeColor: Color(0xFF13b6ec),
+          activeThumbColor: Color(0xFF13b6ec),
           activeTrackColor: Color(0xFF13b6ec).withOpacity(0.3),
         ),
       ],
@@ -470,7 +472,7 @@ class _RiskManagementScreenState extends State<RiskManagementScreen> {
       trailing: Switch(
         value: value,
         onChanged: onChanged,
-        activeColor: Color(0xFF13b6ec),
+        activeThumbColor: Color(0xFF13b6ec),
         activeTrackColor: Color(0xFF13b6ec).withOpacity(0.3),
       ),
     );

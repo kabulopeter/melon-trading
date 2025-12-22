@@ -58,5 +58,9 @@ def generate_for_symbol(symbol, name, asset_type, start_price=100.0, volatility=
 
 if __name__ == "__main__":
     from core.models import Asset
-    # generate_for_symbol("AAPL", "Apple Inc.", Asset.AssetType.STOCK, start_price=150.0)
+    generate_for_symbol("AAPL", "Apple Inc.", Asset.AssetType.STOCK, start_price=150.0)
+    generate_for_symbol("BTCUSD", "Bitcoin", Asset.AssetType.CRYPTO, start_price=45000.0, volatility=500.0)
+    generate_for_symbol("EURUSD", "Euro / USD", Asset.AssetType.FOREX, start_price=1.08, volatility=0.01)
     generate_for_symbol("R_100", "Volatility 100 Index", Asset.AssetType.SYNTHETIC, start_price=1000.0, volatility=15.0)
+    generate_for_symbol("TSLA", "Tesla Inc.", Asset.AssetType.STOCK, start_price=240.0, volatility=5.0)
+    generate_for_symbol("NVDA", "NVIDIA Corp.", Asset.AssetType.STOCK, start_price=480.0, volatility=10.0)

@@ -15,6 +15,7 @@ urlpatterns = [
     
     # API V1
     path('api/v1/', include('core.urls')),
+    path('api/v1/ai/', include('ai_prediction.urls')),
 
     # Docs
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),

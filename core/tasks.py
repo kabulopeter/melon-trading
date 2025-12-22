@@ -98,25 +98,54 @@ def analyze_market_trends():
 def run_system_update():
     """
     Master task to fetch fresh data for all assets and then run AI predictions.
+    If Auto-Trade is enabled, it automatically takes positions.
     """
-    from .models import Asset
+    from .models import Asset, UserPreference, Trade
     from .tasks import collect_market_data
     from ai_prediction.services import PredictionService
+    from django.contrib.auth.models import User
     
     logger.info("🔄 Starting System-Wide Data Update & AI Prediction...")
     active_assets = Asset.objects.filter(is_active=True)
+    
+    # Global Demo User for now
+    user = User.objects.first()
+    prefs, _ = UserPreference.objects.get_or_create(user=user)
     
     for asset in active_assets:
         # 1. Collect fresh data (last 1 day)
         collect_market_data.delay(asset.symbol, days=1)
         
-        # 2. Prediction will be naturally fresher as collect_market_data is async,
-        # but for a strict sequence we could chain them.
-        # For simplicity in this demo, we run them in parallel or sequence.
-        # We'll call run_prediction directly after for each asset.
+        # 2. Run Prediction
         try:
-            PredictionService.run_prediction(asset.symbol)
+            signal = PredictionService.run_prediction(asset.symbol)
+            
+            # 3. Auto-Trading Logic
+            if prefs.auto_trade and signal:
+                if signal.confidence >= prefs.min_confidence:
+                    logger.info(f"🤖 AUTO-TRADE: HIGH CONFIDENCE ({signal.confidence*100:.1f}%) for {asset.symbol}")
+                    
+                    # Prevent duplicate trades if one is already open for this asset
+                    existing_trade = Trade.objects.filter(user=user, asset=asset, status=Trade.Status.OPEN).exists()
+                    if not existing_trade:
+                        Trade.objects.create(
+                            user=user,
+                            asset=asset,
+                            signal=signal,
+                            side=signal.signal_type,
+                            entry_price=signal.technical_indicators.get('current_price', 0),
+                            size=1.0,
+                            stop_loss=float(signal.technical_indicators.get('current_price', 0)) * 0.95,
+                            take_profit=float(signal.technical_indicators.get('current_price', 0)) * 1.10,
+                            confidence_score=signal.confidence,
+                            status=Trade.Status.OPEN,
+                            strategy="AI_AUTO_V1"
+                        )
+                        logger.info(f"🚀 AUTO-TRADE: Position OPENED for {asset.symbol}")
+                    else:
+                        logger.info(f"⏭️ AUTO-TRADE: Position already open for {asset.symbol}, skipping.")
+                        
         except Exception as e:
             logger.error(f"Post-update prediction failed for {asset.symbol}: {e}")
             
-    return f"Update triggered for {active_assets.count()} assets."
+    return f"Update & Auto-Trade triggered for {active_assets.count()} assets."

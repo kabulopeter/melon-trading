@@ -108,7 +108,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
         child: Row(
           children: [
             const SizedBox(width: 16),
-            ...["Tous", "Actualités", "Annonces", "Conseils"].map((f) => _buildFilterChip(f)).toList(),
+            ...["Tous", "Actualités", "Annonces", "Conseils"].map((f) => _buildFilterChip(f)),
             const SizedBox(width: 16),
           ],
         ),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'dashboard_screen.dart';
 import 'wallet_screen.dart';
+import 'ai_intelligence_screen.dart';
 import 'analytics_screen.dart';
 import 'settings_screen.dart';
 import 'challenges_screen.dart';
@@ -19,6 +20,7 @@ class _NavigationWrapperState extends State<NavigationWrapper> {
   final List<Widget> _screens = [
     const DashboardScreen(),
     const WalletScreen(),
+    const AiIntelligenceScreen(),
     const AnalyticsScreen(),
     const SettingsScreen(),
   ];
@@ -54,8 +56,9 @@ class _NavigationWrapperState extends State<NavigationWrapper> {
           _buildNavItem(Icons.grid_view_rounded, "Accueil", 0),
           _buildNavItem(Icons.account_balance_wallet_outlined, "Portefeuille", 1),
           _buildMiddleAction(),
-          _buildNavItem(Icons.analytics_outlined, "Signaux", 2),
-          _buildNavItem(Icons.settings_outlined, "Paramètres", 3),
+          _buildNavItem(Icons.auto_awesome_outlined, "IA", 2),
+          _buildNavItem(Icons.analytics_outlined, "Analytics", 3),
+          _buildNavItem(Icons.settings_outlined, "Profil", 4),
         ],
       ),
     );

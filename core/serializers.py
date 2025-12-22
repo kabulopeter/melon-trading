@@ -48,12 +48,13 @@ class PriceHistorySerializer(serializers.ModelSerializer):
         read_only_fields = ['datetime', 'open', 'high', 'low', 'close', 'volume']
 
 class TradeSerializer(serializers.ModelSerializer):
-    asset = serializers.PrimaryKeyRelatedField(queryset=Asset.objects.all())
+    asset_details = AssetSerializer(source='asset', read_only=True)
+    asset = serializers.PrimaryKeyRelatedField(queryset=Asset.objects.all(), write_only=True)
 
     class Meta:
         model = Trade
         fields = [
-            'id', 'asset', 'side', 'status', 
+            'id', 'asset', 'asset_details', 'side', 'status', 
             'entry_price', 'exit_price', 'size', 
             'stop_loss', 'take_profit', 'pnl', 
             'confidence_score', 'opened_at', 'closed_at', 

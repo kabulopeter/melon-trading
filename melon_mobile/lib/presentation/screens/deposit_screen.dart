@@ -15,7 +15,39 @@ class _DepositScreenState extends State<DepositScreen> {
   final TextEditingController _amountCtrl = TextEditingController();
   final WalletService _walletService = WalletService(ApiService());
   bool _isLoading = false;
-  String _selectedMethod = 'mpesa';
+  String _selectedMethod = 'MPESA';
+
+  Future<void> _initiateDeposit() async {
+    final amount = _amountCtrl.text.trim();
+    if (amount.isEmpty || double.tryParse(amount) == null) {
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Veuillez entrer un montant valide")));
+      return;
+    }
+
+    setState(() => _isLoading = true);
+    HapticFeedback.heavyImpact();
+
+    try {
+      final tx = await _walletService.initiateDeposit(
+        amount: amount,
+        method: _selectedMethod,
+        phoneNumber: "0810000000",
+      );
+
+      if (mounted) {
+        if (tx != null) {
+          ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Dépôt initié avec succès.")));
+          Navigator.pop(context, true);
+        } else {
+          ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Erreur lors de l'initiation du dépôt.")));
+        }
+      }
+    } catch (e) {
+      if (mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Erreur: $e")));
+    } finally {
+      if (mounted) setState(() => _isLoading = false);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -111,9 +143,9 @@ class _DepositScreenState extends State<DepositScreen> {
   Widget _buildPaymentMethods() {
     return Column(
       children: [
-        _buildMethodItem("M-Pesa Vodacom", "081 *** 892 • Justin M.", Icons.phone_iphone, Colors.redAccent, true, 'mpesa'),
-        _buildMethodItem("Airtel Money", "099 *** 123 • Justin M.", Icons.sim_card, Colors.red, false, 'airtel'),
-        _buildMethodItem("Visa • Equity Bank", "**** 4242 • Exp 12/25", Icons.credit_card, Colors.blue, false, 'card'),
+        _buildMethodItem("M-Pesa Vodacom", "081 *** 892 • Justin M.", Icons.phone_iphone, Colors.redAccent, true, 'MPESA'),
+        _buildMethodItem("Airtel Money", "099 *** 123 • Justin M.", Icons.sim_card, Colors.red, false, 'AIRTEL'),
+        _buildMethodItem("Visa • Equity Bank", "**** 4242 • Exp 12/25", Icons.credit_card, Colors.blue, false, 'CARD'),
         _buildAddMethod(),
       ],
     );
@@ -148,7 +180,7 @@ class _DepositScreenState extends State<DepositScreen> {
   }
 
   Widget _buildAddMethod() {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       child: OutlinedButton.icon(
         onPressed: () {},
@@ -243,11 +275,11 @@ class _DepositScreenState extends State<DepositScreen> {
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
-              onPressed: () {
-                HapticFeedback.heavyImpact();
-              },
+              onPressed: _isLoading ? null : _initiateDeposit,
               style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF13b6ec), foregroundColor: Colors.black, padding: const EdgeInsets.symmetric(vertical: 18), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)), elevation: 10, shadowColor: const Color(0xFF13b6ec).withOpacity(0.2)),
-              child: const Row(mainAxisAlignment: MainAxisAlignment.center, children: [Text("Confirmer le Dépôt", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)), SizedBox(width: 8), Icon(Icons.arrow_forward)]),
+              child: _isLoading 
+                ? const SizedBox(width: 20, height: 20, child: CircularProgressIndicator(strokeWidth: 2, color: Colors.black))
+                : const Row(mainAxisAlignment: MainAxisAlignment.center, children: [Text("Confirmer le Dépôt", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)), SizedBox(width: 8), Icon(Icons.arrow_forward)]),
             ),
           ),
           const SizedBox(height: 12),

@@ -7,6 +7,8 @@ import 'package:flutter/services.dart';
 import '../widgets/skeleton_loading.dart';
 
 class StrategyConfigScreen extends StatefulWidget {
+  const StrategyConfigScreen({super.key});
+
   @override
   _StrategyConfigScreenState createState() => _StrategyConfigScreenState();
 }
@@ -462,7 +464,7 @@ class _StrategyConfigScreenState extends State<StrategyConfigScreen> {
                 Switch(
                   value: enabled,
                   onChanged: onToggle,
-                  activeColor: Color(0xFF13b6ec),
+                  activeThumbColor: Color(0xFF13b6ec),
                 ),
               ],
             ),
@@ -502,7 +504,7 @@ class _StrategyConfigScreenState extends State<StrategyConfigScreen> {
   }
 
   Widget _buildBacktestButton() {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       child: ElevatedButton(
         onPressed: () {},

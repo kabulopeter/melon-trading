@@ -1,4 +1,3 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import '../../data/models/trade_model.dart';
 import 'package:intl/intl.dart';

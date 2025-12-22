@@ -116,7 +116,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
               hintText: "••••••••",
               hintStyle: const TextStyle(color: Colors.white10),
               border: InputBorder.none,
-              suffixIcon: IconButton(icon: Icon((isFirst ? _obscureText : _obscureConfirmText) ? Icons.visibility : Icons.visibility_off, color: Colors.white24, size: 20), onPressed: () => setState(() { if (isFirst) _obscureText = !_obscureText; else _obscureConfirmText = !_obscureConfirmText; })),
+              suffixIcon: IconButton(icon: Icon((isFirst ? _obscureText : _obscureConfirmText) ? Icons.visibility : Icons.visibility_off, color: Colors.white24, size: 20), onPressed: () => setState(() { if (isFirst) {
+                _obscureText = !_obscureText;
+              } else {
+                _obscureConfirmText = !_obscureConfirmText;
+              } })),
             ),
           ),
         ),

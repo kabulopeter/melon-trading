@@ -12,7 +12,7 @@ class ProfileScreen extends StatefulWidget {
 
 class _ProfileScreenState extends State<ProfileScreen> {
   final ProfileService _service = ProfileService(ApiService());
-  bool _isLoading = false;
+  final bool _isLoading = false;
 
   @override
   Widget build(BuildContext context) {
@@ -158,7 +158,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ],
             ),
           ),
-          Switch(value: val, onChanged: (v) {}, activeColor: const Color(0xFF13b6ec)),
+          Switch(value: val, onChanged: (v) {}, activeThumbColor: const Color(0xFF13b6ec)),
         ],
       ),
     );
@@ -181,7 +181,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ],
             ),
           ),
-          Switch(value: false, onChanged: (v) {}, activeColor: const Color(0xFF13b6ec)),
+          Switch(value: false, onChanged: (v) {}, activeThumbColor: const Color(0xFF13b6ec)),
         ],
       ),
     );

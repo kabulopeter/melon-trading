@@ -1,10 +1,4 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import '../../data/services/api_service.dart';
-import '../../data/services/news_service.dart';
-import 'package:intl/intl.dart';
-import 'dashboard_screen.dart';
-import 'wallet_screen.dart';
 
 class NewsScreen extends StatefulWidget {
   const NewsScreen({super.key});

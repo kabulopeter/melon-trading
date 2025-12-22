@@ -7,6 +7,8 @@ import 'dart:ui';
 import '../widgets/skeleton_loading.dart';
 
 class ChallengesScreen extends StatefulWidget {
+  const ChallengesScreen({super.key});
+
   @override
   _ChallengesScreenState createState() => _ChallengesScreenState();
 }
@@ -350,7 +352,7 @@ class _ChallengesScreenState extends State<ChallengesScreen> with SingleTickerPr
           ),
           child: Row(
             children: [
-              Container(
+              SizedBox(
                 width: 30,
                 child: Text(
                   "${index + 1}",

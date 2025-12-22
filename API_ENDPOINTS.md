@@ -181,7 +181,15 @@ http://localhost:8000/api/v1/
   }
   ```
 
-## 🏢 Brokers
+## 🧠 AI Intelligence
+
+### AI Predictions
+
+- `POST /ai/predict/` - Déclencher une prédiction IA pour un symbole spécifique
+  - Param: `{"symbol": "BTCUSD"}`
+- `GET /ai/predict/batch/` - Déclencher des prédictions pour tous les actifs actifs
+
+## 🏬 Brokers
 
 ### Broker Accounts
 

@@ -73,13 +73,17 @@ class TradeViewSet(viewsets.ModelViewSet):
     filter_backends = [DjangoFilterBackend]
     filterset_fields = ['asset', 'status', 'side']
 
-class WalletViewSet(viewsets.GenericViewSet):
+    def perform_create(self, serializer):
+        from django.contrib.auth.models import User
+        # Use authenticated user or first user for demo
+        user = self.request.user if self.request.user.is_authenticated else User.objects.first()
+        serializer.save(user=user)
+
+class WalletViewSet(viewsets.ViewSet):
     """
     ViewSet for Wallet operations: Balance, Deposit, Withdraw.
     """
-    queryset = UserWallet.objects.all()
-    serializer_class = UserWalletSerializer
-    permission_classes = [permissions.AllowAny] # Use IsAuthenticated in real prod
+    permission_classes = [permissions.AllowAny] 
 
     def get_user(self, request):
         if request.user.is_authenticated:
@@ -175,9 +179,8 @@ class WalletViewSet(viewsets.GenericViewSet):
         txs = WalletTransaction.objects.filter(user=user).order_by('-created_at')
         return Response(WalletTransactionSerializer(txs, many=True).data)
 
-class PreferenceViewSet(viewsets.GenericViewSet):
+class PreferenceViewSet(viewsets.ViewSet):
     permission_classes = [permissions.AllowAny]
-    serializer_class = UserPreferenceSerializer
 
     def get_user(self, request):
         if request.user.is_authenticated:
@@ -188,7 +191,7 @@ class PreferenceViewSet(viewsets.GenericViewSet):
             user = User.objects.create_user(username='demo_user', password='password123')
         return user
 
-    @action(detail=False, methods=['get', 'patch'])
+    @action(detail=False, methods=['get', 'patch'], url_path='settings')
     def settings(self, request):
         user = self.get_user(request)
         prefs, _ = UserPreference.objects.get_or_create(user=user)
@@ -200,11 +203,11 @@ class PreferenceViewSet(viewsets.GenericViewSet):
                 return Response(serializer.data)
             return Response(serializer.errors, status=400)
             
-        return Response(UserPreferenceSerializer(prefs).data)
+        serializer = UserPreferenceSerializer(prefs)
+        return Response(serializer.data)
 
-class ProfileViewSet(viewsets.GenericViewSet):
+class ProfileViewSet(viewsets.ViewSet):
     permission_classes = [permissions.AllowAny]
-    serializer_class = UserProfileSerializer
 
     def get_user(self, request):
         if request.user.is_authenticated:
@@ -232,7 +235,7 @@ class ProfileViewSet(viewsets.GenericViewSet):
             
         return Response(UserProfileSerializer(profile).data)
 
-class AnalyticsViewSet(viewsets.GenericViewSet):
+class AnalyticsViewSet(viewsets.ViewSet):
     permission_classes = [permissions.AllowAny]
 
     def get_user(self, request):

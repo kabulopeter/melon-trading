@@ -34,7 +34,7 @@ class Trade {
   factory Trade.fromJson(Map<String, dynamic> json) {
     return Trade(
       id: json['id'],
-      asset: Asset.fromJson(json['asset']),
+      asset: Asset.fromJson(json['asset_details'] ?? json['asset']),
       side: json['side'],
       entryPrice: double.parse(json['entry_price'].toString()),
       exitPrice: json['exit_price'] != null
