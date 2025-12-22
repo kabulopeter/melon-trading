@@ -71,10 +71,10 @@ models/
 *.bak
 
 # Documentation
-*.md
+# *.md (Commented out to allow deployment)
 *.docx
 *.pdf
-*.txt
+# *.txt (Commented out to allow requirements.txt)
 
 # Frontend & Mobile
 melon_frontend/
